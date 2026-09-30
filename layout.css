@@ -32,94 +32,14 @@ ul li a:hover {
   background-color: #111111;
 }
 
-.menu op het derde niveau
- {
- positie : absoluut ;
- boven : 0 ;
- rechts : -150px ;
- breedte : 150px ;
- lijststijl : geen ;
- opvulling : 0 ;
- marge : 0 ;
- weergave : geen ;
- }
-
- .menu op het derde niveau > li
- {
- hoogte : 30px ;
- breedte : 80px ;
- achtergrond : #999999 ;
- }
- .third-level-menu > li :hover { background : #CCCCCC ; }
-
- .tweede-niveau-menu
- {
- positie : absoluut ;
- bovenzijde : 30px ;
- links : 0 ;
- breedte : 150px ;
- lijststijl : geen ;
- opvulling : 0 ;
- marge : 0 ;
- weergave : geen ;
- }
-
- .tweede-niveau-menu > li
- {
- positie : relatief ;
- hoogte : 30px ;
- achtergrond : #999999 ;
- }
- .second-level-menu > li :hover { background : #CCCCCC ; }
-
- .top-level-menu
- {
- lijststijl : geen ;
- opvulling : 0 ;
- marge : 0 ;
- }
-
- .top-level-menu > li
- {
- positie : relatief ;
- zwevend : links ;
- hoogte : 30px ;
- breedte : 150px ;
- achtergrond : #999999 ;
- }
- .top-level-menu > li :hover { background : #CCCCCC ; }
-
- .top-level-menu li :hover > ul
- {
- /* Bij hover wordt het menu van het volgende level weergegeven */
- weergave : inline ;
- }
-
-
- /* Menu Link Stijlen */
-
- .top-level-menu a /* Toepassen op alle links binnen het menu met meerdere niveaus */
- {
- lettertype : vet 14px Arial , Helvetica , schreefloos ;
- kleur : #FFFFFF ;
- tekstdecoratie : geen ;
- opvulling : 0 0 0 10px ;
-
- /* Zorg ervoor dat de link de volledige lijstitemcontainer omvat */
- weergave : blok ;
- regelhoogte : 30px ;
- }
- .top-level-menu a :hover { color : #000000 ; }
-
-</style>
 </head>
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href=#home>Home</a></li>
+  <li><a href=#news>News</a></li>
+  <li><a href=#contact>Contact</a></li>
+  <li><a href=#about>About</a></li>
 </ul>
 
 <h2>Horizontal Navbar Using Float</h2>
