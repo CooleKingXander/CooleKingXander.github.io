@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!--dit is de homepage van mijn site-->
+<html> <dit is het html-element-->
+    <head>
+        <title>homepage</title>
+        <link rel="stylesheet" type="text/css" href="layout.css">
+        <meta charset-"utf-8">
+    </head>
+    <body>
+      
+<ul class="top-level-menu">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="binairstelsel.html">Informatica</a></li>
+    <li><a href="kleurmodellen.html">3lagenmodel</a></li>
+        
+      <ul class="second-level-menu">
+            <li><a href="#">Toepassingenlaag</a></li>
+            <li><a href="#">Logische laag</a></li>
+            <li><a href="#">Fysieke laag</a></li>
+            <li>
+                <a href="#">Computerarchitectuur</a>
+                <ul class="third-level-menu">
+                    <li><a href="/html/cpu.html">CPU</a></li>
+                    <li><a href="#">Specifieke onderwerp</a></li>
+                    <li><a href="#">Uitlegvideo</a></li>
+                    <li><a href="#">Over deze site</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Spelletjes</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<iframe src="https://games.penjee.com/binary-bonanza/game.php" width="700" height="500" frameborder="no" scrolling="no" ></iframe>
+
+
+        Hallo deze website gaat over 5 vrienden uit voorschoten
+       <a href="binairstelsel.html">Fornite</a>
+        <img src="Foto Mats en Chris.jpg" alt="Foto Mats en Chris" style= margin-left: 50px; margin-top:20px width="200" height="200"> <!--Dit is de foto--> 
+    </body>
+</html>
+         
