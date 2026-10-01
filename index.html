@@ -218,7 +218,56 @@
         }
 
     }
+/* SAM - LINKSONDER */
 
+.sam-link {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    font-size: 12px;
+    z-index: 2000;
+}
+
+.sam-link > a {
+    color: #777;
+    text-decoration: none;
+}
+
+.sam-link > a:hover {
+    color: #00a8ff;
+}
+
+.sam-dropdown {
+    display: none;
+
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+
+    background: #1d273d;
+    min-width: 170px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.sam-dropdown a {
+    display: block;
+    padding: 8px 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+.sam-dropdown a:hover {
+    background: #00a8ff;
+}
+
+.sam-link:hover .sam-dropdown {
+    display: block;
+}
 </style>
 
 </head>
