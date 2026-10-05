@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Does - Torriehub</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101522;
+    color: white;
+}
+
+nav {
+    background: #182033;
+    padding: 0 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+
+    padding: 20px 18px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #00a8ff;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 260px;
+
+    background: #1d273d;
+
+    list-style: none;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 14px 18px;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* BIOGRAFIE */
+
+.biografie {
+    max-width: 900px;
+
+    margin: 80px auto;
+
+    padding: 50px 40px;
+
+    background: #1b2538;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.biografie h1 {
+    color: #00a8ff;
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+.biografie p {
+    color: #d5dbea;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+footer {
+    margin-top: 80px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #0b0f18;
+
+    color: #8993a8;
+}
+
+
+@media (max-width: 800px) {
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+<ul class="menu">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Mats ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="mats.html">Biografie</a></li>
+            <li><a href="mats.html#kwaliteiten">Kwaliteiten</a></li>
+            <li><a href="mats.html#torrie">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Beau ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="beau.html">Biografie</a></li>
+            <li><a href="beau.html#kwaliteiten">Kwaliteiten</a></li>
+            <li><a href="beau.html#torrie">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Chris ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="chris.html">Biografie</a></li>
+            <li><a href="chris.html#kwaliteiten">Kwaliteiten</a></li>
+            <li><a href="chris.html#torrie">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Does ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="does.html">Biografie</a></li>
+            <li><a href="does.html#kwaliteiten">Kwaliteiten</a></li>
+            <li><a href="does.html#torrie">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Xander ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="xander.html">Biografie</a></li>
+            <li><a href="xander.html#kwaliteiten">Kwaliteiten</a></li>
+            <li><a href="xander.html#torrie">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+</ul>
+
+</nav>
+
+
+<section class="biografie">
+
+    <h1>Does</h1>
+
+    <p>
+        Does is geboren op 18 januari 2010. Hij heeft eerst een tijd
+        in Den Haag gewoond, totdat hij naar Voorschoten verhuisde.
+        In Voorschoten ging hij naar de Emmaus en heeft hij eigenlijk
+        zijn hele leven gevoetbald.
+    </p>
+
+    <p>
+        Na de basisschool ging Does naar het Adelbert College in
+        Wassenaar, waar hij nu vwo doet. Hij woont aan de andere kant
+        van Voorschoten met zijn ouders en zijn zus Josje.
+    </p>
+
+    <p>
+        We hebben Does leren kennen via het voetbalteam. De connectie
+        werd alleen maar beter toen we met z'n allen op kamp gingen.
+        Sindsdien zijn we beste maatjes.
+    </p>
+
+    <p>
+        Does was vroeger altijd goed bevriend met Jurre, met wie wij
+        ook veel omgingen. Dat is inmiddels al een tijdje veranderd.
+    </p>
+
+    <p>
+        Does werkt ook. Hij werkt bij Domino's, dus als we ooit honger
+        hebben weten we in ieder geval wie we moeten bellen.
+    </p>
+
+    <p>
+        Bij de dames heeft Does voorlopig nog weinig succes, ondanks
+        zijn interesse vanuit de dames. Ook gaat Does niet naar de gym.
+        Hij larp't daarentegen wel heel erg door zichzelf ervan te
+        overtuigen dat hij wél gespierd is.
+    </p>
+
+</section>
+
+
+<footer>
+
+<p>
+    © 2026 - Torriehub
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
