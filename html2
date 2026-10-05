@@ -39,4 +39,506 @@
         <img src="Foto Mats en Chris.jpg" alt="Foto Mats en Chris" style= margin-left: 50px; margin-top:20px width="200" height="200"> <!--Dit is de foto--> 
     </body>
 </html>
-         
+         <!DOCTYPE html>
+
+<html lang="nl">
+
+<head> <meta charset=""> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Torriehub</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #101522;
+        color: white;
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    nav {
+        background: #182033;
+        padding: 0 30px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    }
+
+    .menu {
+        max-width: 1200px;
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        list-style: none;
+    }
+
+    .menu > li {
+        position: relative;
+    }
+
+    .menu a {
+        display: block;
+
+        padding: 20px 18px;
+
+        color: white;
+        text-decoration: none;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .menu a:hover {
+        background: #00a8ff;
+        color: white;
+    }
+
+
+    /* =========================
+       DROPDOWN
+    ========================= */
+
+    .dropdown-menu {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        min-width: 260px;
+
+        background: #1d273d;
+
+        list-style: none;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+
+        z-index: 1000;
+    }
+
+    .dropdown-menu li {
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+
+    /* =========================
+       HOME
+    ========================= */
+
+    .home {
+        max-width: 900px;
+        margin: 100px auto;
+
+        padding: 60px 30px;
+
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 50px;
+        color: #00a8ff;
+
+        margin-bottom: 25px;
+    }
+
+    .home p {
+        font-size: 20px;
+        line-height: 1.7;
+
+        color: #d5dbea;
+    }
+
+
+    /* =========================
+       VRIENDEN
+    ========================= */
+
+    .vrienden {
+        max-width: 1100px;
+        margin: auto;
+
+        padding: 50px 30px;
+    }
+
+    .vrienden h2 {
+        text-align: center;
+
+        font-size: 35px;
+
+        margin-bottom: 40px;
+    }
+
+    .vrienden-container {
+        display: grid;
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 20px;
+    }
+
+    .vriend {
+        background: #1b2538;
+
+        padding: 30px 15px;
+
+        border-radius: 12px;
+
+        text-align: center;
+
+        transition: 0.3s;
+    }
+
+    .vriend:hover {
+        transform: translateY(-7px);
+
+        background: #243451;
+    }
+
+    .vriend h3 {
+        color: #00a8ff;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        margin-top: 80px;
+
+        padding: 30px;
+
+        text-align: center;
+
+        background: #0b0f18;
+
+        color: #8993a8;
+    }
+
+
+    /* =========================
+       MOBIEL
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        .menu {
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            padding: 15px 10px;
+            font-size: 14px;
+        }
+
+        .vrienden-container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+/* SAM - LINKSONDER */
+
+.sam-link {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    font-size: 12px;
+    z-index: 2000;
+}
+
+.sam-link > a {
+    color: #777;
+    text-decoration: none;
+}
+
+.sam-link > a:hover {
+    color: #00a8ff;
+}
+
+.sam-dropdown {
+    display: none;
+
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+
+    background: #1d273d;
+    min-width: 170px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.sam-dropdown a {
+    display: block;
+    padding: 8px 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+.sam-dropdown a:hover {
+    background: #00a8ff;
+}
+
+.sam-link:hover .sam-dropdown {
+    display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= MENU ========================= -->
+
+<nav>
+
+<ul class="menu">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+
+<!-- MATS -->
+<li class="dropdown">
+    <a href="#">Mats ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="#mats-biografie">Biografie</a></li>
+        <li><a href="#mats-kwaliteiten">Kwaliteiten</a></li>
+        <li><a href="#mats-torrie">Leipste torrie </a></li>
+    </ul>
+</li>
+
+<!-- BEAU -->
+<li class="dropdown">
+    <a href="#">Beau ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="#beau-biografie">Biografie</a></li>
+        <li><a href="#beau-kwaliteiten">Kwaliteiten</a></li>
+        <li><a href="#beau-torrie">Leipste torrie </a></li>
+    </ul>
+</li>
+
+<!-- CHRIS -->
+<li class="dropdown">
+    <a href="#">Chris ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="#chris-biografie">Biografie</a></li>
+        <li><a href="#chris-kwaliteiten">Kwaliteiten</a></li>
+        <li><a href="#chris-torrie">Leipste torrie </a></li>
+    </ul>
+</li>
+
+<!-- DOES -->
+<li class="dropdown">
+    <a href="#">Does ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="#does-biografie">Biografie</a></li>
+        <li><a href="#does-kwaliteiten">Kwaliteiten</a></li>
+        <li><a href="#does-torrie">Leipste torrie </a></li>
+    </ul>
+</li>
+
+<!-- XANDER -->
+<li class="dropdown">
+    <a href="#">Xander ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="#xander-biografie">Biografie</a></li>
+        <li><a href="#xander-kwaliteiten">Kwaliteiten</a></li>
+        <li><a href="#xander-torrie">Leipste torrie </a></li>
+    </ul>
+</li>
+
+    <!-- INFORMATICA DROPDOWN -->
+
+    <li class="dropdown">
+
+        <a href="#">
+             Informatica ▾
+        </a>
+
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="invoer-verwerking-uitvoer.html">
+                    Invoer - verwerking - uitvoer
+                </a>
+            </li>
+
+            <li>
+                <a href="binair.html">
+                    Binair stelsel
+                </a>
+            </li>
+
+            <li>
+                <a href="kleurmodellen.html">
+                    Kleurmodellen
+                </a>
+            </li>
+
+            <li>
+                <a href="compressie.html">
+                    Compressie: Bitmap / Vector
+                </a>
+            </li>
+
+            <li>
+                <a href="ai.html">
+                    AI
+                </a>
+            </li>
+
+            <li>
+                <a href="ai-gebruik.html">
+                    Waar gebruik ik AI voor?
+                </a>
+            </li>
+
+            <li>
+                <a href="ai-mobiel.html">
+                    AI in mijn mobiel
+                </a>
+            </li>
+
+            <li>
+                <a href="ai-artikel.html">
+                    AI-artikel
+                </a>
+            </li>
+
+        </ul>
+
+    </li>
+
+</ul>
+
+</nav>
+
+
+
+
+<!-- ========================= HOME ========================= -->
+
+<main>
+
+<section class="home">
+
+    <h1>Welkom op Torriehub!</h1>
+
+    <p>
+        Wij zijn vijf vrienden uit Voorschoten.
+        Op deze website ga ik vertellen over mijn beste vrienden(de torries dus) en over mijzelf
+        en bespreken we natuurlijk ook een beetje verschillende onderwerpen
+        over informatica en technologie. Die uiteraard ook heel belangrijk zijn!
+
+
+        (torrie betekent verhaal)
+    </p>
+
+    <p>
+        👨 Mats &nbsp; • &nbsp;
+        👨 Beau &nbsp; • &nbsp;
+        👨 Chris &nbsp; • &nbsp;
+        👩 Does &nbsp; • &nbsp;
+        👨 Xander
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     ONZE VIJF VRIENDEN
+========================= -->
+
+<section class="vrienden">
+
+    <h2>Geheime info over</h2>
+
+    <div class="vrienden-container">
+
+
+        <div class="vriend">
+            <h3>Mats</h3>
+        </div>
+
+
+        <div class="vriend">
+            <h3>Beau</h3>
+        </div>
+
+
+        <div class="vriend">
+            <h3>Chris</h3>
+        </div>
+
+
+        <div class="vriend">
+            <h3>Does</h3>
+        </div>
+
+
+        <div class="vriend">
+            <h3>Xander</h3>
+        </div>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+<p>
+    © 2026 - Mijn website
+</p>
+
+</footer>
+<div class="sam-link">
+    <a href="#sam-biografie">Sam ▾</a>
+
+    <div class="sam-dropdown">
+        <a href="#sam-biografie">Biografie</a>
+        <a href="#sam-kwaliteiten">Kwaliteiten</a>
+        <a href="#sam-torrie">Leipste torrie 😂</a>
+    </div>
+</div>
+</body>
+
+</html>
+ 

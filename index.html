@@ -1,8 +1,11 @@
+```html
 <!DOCTYPE html>
 
 <html lang="nl">
 
-<head> <meta charset=""> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Torriehub</title>
 
@@ -126,6 +129,8 @@
         line-height: 1.7;
 
         color: #d5dbea;
+
+        margin-bottom: 20px;
     }
 
 
@@ -182,6 +187,53 @@
 
 
     /* =========================
+       BIOGRAFIEËN
+    ========================= */
+
+    .biografie {
+        max-width: 900px;
+        margin: 80px auto;
+
+        padding: 40px 30px;
+
+        background: #1b2538;
+
+        border-radius: 15px;
+
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .biografie h2 {
+        color: #00a8ff;
+
+        font-size: 35px;
+
+        margin-bottom: 25px;
+
+        text-align: center;
+    }
+
+    .biografie h3 {
+        color: #00a8ff;
+
+        font-size: 22px;
+
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .biografie p {
+        color: #d5dbea;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* =========================
        FOOTER
     ========================= */
 
@@ -218,61 +270,67 @@
         }
 
     }
-/* SAM - LINKSONDER */
 
-.sam-link {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
 
-    font-size: 12px;
-    z-index: 2000;
-}
+    /* =========================
+       SAM - LINKSONDER
+    ========================= */
 
-.sam-link > a {
-    color: #777;
-    text-decoration: none;
-}
+    .sam-link {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
 
-.sam-link > a:hover {
-    color: #00a8ff;
-}
+        font-size: 12px;
+        z-index: 2000;
+    }
 
-.sam-dropdown {
-    display: none;
+    .sam-link > a {
+        color: #777;
+        text-decoration: none;
+    }
 
-    position: absolute;
-    bottom: 25px;
-    left: 0;
+    .sam-link > a:hover {
+        color: #00a8ff;
+    }
 
-    background: #1d273d;
-    min-width: 170px;
+    .sam-dropdown {
+        display: none;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
+        position: absolute;
+        bottom: 25px;
+        left: 0;
 
-.sam-dropdown a {
-    display: block;
-    padding: 8px 12px;
+        background: #1d273d;
+        min-width: 170px;
 
-    color: white;
-    text-decoration: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
 
-    font-size: 12px;
-}
+    .sam-dropdown a {
+        display: block;
+        padding: 8px 12px;
 
-.sam-dropdown a:hover {
-    background: #00a8ff;
-}
+        color: white;
+        text-decoration: none;
 
-.sam-link:hover .sam-dropdown {
-    display: block;
-}
+        font-size: 12px;
+    }
+
+    .sam-dropdown a:hover {
+        background: #00a8ff;
+    }
+
+    .sam-link:hover .sam-dropdown {
+        display: block;
+    }
+
 </style>
 
 </head>
 
 <body>
+
 
 <!-- ========================= MENU ========================= -->
 
@@ -285,62 +343,137 @@
     </li>
 
 
-<!-- MATS -->
-<li class="dropdown">
-    <a href="#">Mats ▾</a>
-    <ul class="dropdown-menu">
-        <li><a href="#mats-biografie">Biografie</a></li>
-        <li><a href="#mats-kwaliteiten">Kwaliteiten</a></li>
-        <li><a href="#mats-torrie">Leipste torrie </a></li>
-    </ul>
-</li>
+    <!-- MATS -->
 
-<!-- BEAU -->
-<li class="dropdown">
-    <a href="#">Beau ▾</a>
-    <ul class="dropdown-menu">
-        <li><a href="#beau-biografie">Biografie</a></li>
-        <li><a href="#beau-kwaliteiten">Kwaliteiten</a></li>
-        <li><a href="#beau-torrie">Leipste torrie </a></li>
-    </ul>
-</li>
+    <li class="dropdown">
 
-<!-- CHRIS -->
-<li class="dropdown">
-    <a href="#">Chris ▾</a>
-    <ul class="dropdown-menu">
-        <li><a href="#chris-biografie">Biografie</a></li>
-        <li><a href="#chris-kwaliteiten">Kwaliteiten</a></li>
-        <li><a href="#chris-torrie">Leipste torrie </a></li>
-    </ul>
-</li>
+        <a href="#">Mats ▾</a>
 
-<!-- DOES -->
-<li class="dropdown">
-    <a href="#">Does ▾</a>
-    <ul class="dropdown-menu">
-        <li><a href="#does-biografie">Biografie</a></li>
-        <li><a href="#does-kwaliteiten">Kwaliteiten</a></li>
-        <li><a href="#does-torrie">Leipste torrie </a></li>
-    </ul>
-</li>
+        <ul class="dropdown-menu">
 
-<!-- XANDER -->
-<li class="dropdown">
-    <a href="#">Xander ▾</a>
-    <ul class="dropdown-menu">
-        <li><a href="#xander-biografie">Biografie</a></li>
-        <li><a href="#xander-kwaliteiten">Kwaliteiten</a></li>
-        <li><a href="#xander-torrie">Leipste torrie </a></li>
-    </ul>
-</li>
+            <li>
+                <a href="#mats-biografie">Biografie</a>
+            </li>
 
-    <!-- INFORMATICA DROPDOWN -->
+            <li>
+                <a href="#mats-kwaliteiten">Kwaliteiten</a>
+            </li>
+
+            <li>
+                <a href="#mats-torrie">Leipste torrie</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+
+    <!-- BEAU -->
+
+    <li class="dropdown">
+
+        <a href="#">Beau ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#beau-biografie">Biografie</a>
+            </li>
+
+            <li>
+                <a href="#beau-kwaliteiten">Kwaliteiten</a>
+            </li>
+
+            <li>
+                <a href="#beau-torrie">Leipste torrie</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+
+    <!-- CHRIS -->
+
+    <li class="dropdown">
+
+        <a href="#">Chris ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#chris-biografie">Biografie</a>
+            </li>
+
+            <li>
+                <a href="#chris-kwaliteiten">Kwaliteiten</a>
+            </li>
+
+            <li>
+                <a href="#chris-torrie">Leipste torrie</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+
+    <!-- DOES -->
+
+    <li class="dropdown">
+
+        <a href="#">Does ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#does-biografie">Biografie</a>
+            </li>
+
+            <li>
+                <a href="#does-kwaliteiten">Kwaliteiten</a>
+            </li>
+
+            <li>
+                <a href="#does-torrie">Leipste torrie</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+
+    <!-- XANDER -->
+
+    <li class="dropdown">
+
+        <a href="#">Xander ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li>
+                <a href="#xander-biografie">Biografie</a>
+            </li>
+
+            <li>
+                <a href="#xander-kwaliteiten">Kwaliteiten</a>
+            </li>
+
+            <li>
+                <a href="#xander-torrie">Leipste torrie</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+
+    <!-- INFORMATICA -->
 
     <li class="dropdown">
 
         <a href="#">
-             Informatica ▾
+            Informatica ▾
         </a>
 
         <ul class="dropdown-menu">
@@ -403,7 +536,6 @@
 
 
 
-
 <!-- ========================= HOME ========================= -->
 
 <main>
@@ -414,12 +546,10 @@
 
     <p>
         Wij zijn vijf vrienden uit Voorschoten.
-        Op deze website ga ik vertellen over mijn beste vrienden(de torries dus) en over mijzelf
-        en bespreken we natuurlijk ook een beetje verschillende onderwerpen
-        over informatica en technologie. Die uiteraard ook heel belangrijk zijn!
-
-
-        (torrie betekent verhaal)
+        Op deze website ga ik vertellen over mijn beste vrienden
+        (de torries dus) en over mijzelf. Ook bespreken we natuurlijk
+        verschillende onderwerpen over informatica en technologie,
+        die uiteraard ook heel belangrijk zijn!
     </p>
 
     <p>
@@ -444,33 +574,249 @@
 
     <div class="vrienden-container">
 
-
         <div class="vriend">
             <h3>Mats</h3>
         </div>
-
 
         <div class="vriend">
             <h3>Beau</h3>
         </div>
 
-
         <div class="vriend">
             <h3>Chris</h3>
         </div>
-
 
         <div class="vriend">
             <h3>Does</h3>
         </div>
 
-
         <div class="vriend">
             <h3>Xander</h3>
         </div>
 
-
     </div>
+
+</section>
+
+
+
+<!-- =========================
+     BIOGRAFIE MATS
+========================= -->
+
+<section class="biografie" id="mats-biografie">
+
+    <h2>Biografie Mats</h2>
+
+    <p>
+        Mats is geboren op 25 oktober 2010 en groeide op in Voorschoten.
+        Ik heb Mats leren kennen op de basisschool. We hebben daar
+        samen heel veel leuke dingen meegemaakt, waaronder natuurlijk
+        vele partijtjes.
+    </p>
+
+    <p>
+        Mats zijn ouders zijn gescheiden en hij heeft een heel knap
+        zusje dat iets jonger is dan hij, genaamd Ella. Zijn ouders
+        zijn ook erg rijk, wat de meet-ups altijd extra leuk maakt,
+        omdat we dan lekker in zijn megawoningen kunnen zitten.
+    </p>
+
+    <p>
+        Mats doet hockey en is na de basisschool naar het
+        Vlietland College gegaan, waar hij nu vwo doet.
+    </p>
+
+    <p>
+        Mats heeft nog nooit gewerkt in zijn leven. De vraag is dan
+        ook maar of hij dat ooit wel gaat doen. Hij gaat helaas ook
+        niet naar de gym.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     BIOGRAFIE BEAU
+========================= -->
+
+<section class="biografie" id="beau-biografie">
+
+    <h2>Biografie Beau</h2>
+
+    <p>
+        Beau is geboren op 17 juli 2010. Hij heeft tot zijn vierde
+        in Delft gewoond en is daarna naar Voorschoten verhuisd.
+        Daar heb ik Beau leren kennen op de basisschool.
+    </p>
+
+    <p>
+        Beau woont nog steeds in Voorschoten met zijn ouders en zijn
+        broertje Thiemo, die een paar jaar jonger is.
+    </p>
+
+    <p>
+        Beau zit inmiddels al acht jaar op hockey. Na de basisschool
+        is hij, net als Mats, naar het Vlietland College gegaan,
+        waar hij vwo doet.
+    </p>
+
+    <p>
+        Ik en Beau hebben een tijdje geen contact gehad, maar door
+        Fortnite zijn we uiteindelijk weer met elkaar in contact
+        gekomen. Sindsdien is de vriendschap weer helemaal terug.
+    </p>
+
+    <p>
+        Beau heeft nog geen werk, maar heeft sinds kort wel een
+        vriendin. Het gaat het afgelopen jaar sowieso een stuk
+        beter met de dames voor Beau.
+    </p>
+
+    <p>
+        In tegenstelling tot Mats gaat Beau gelukkig wel naar de gym.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     BIOGRAFIE CHRIS
+========================= -->
+
+<section class="biografie" id="chris-biografie">
+
+    <h2>Biografie Chris</h2>
+
+    <p>
+        Chris is geboren op 3 juli 2010 en heeft zijn hele leven
+        in Voorschoten gewoond. Chris woont met zijn broertjes,
+        vader en moeder allemaal bij elkaar in dezelfde straat
+        waar mijn vader woont.
+    </p>
+
+    <p>
+        Ik ken Chris daarom eigenlijk al sinds mijn geboorte,
+        omdat onze ouders al heel lang met elkaar omgaan.
+    </p>
+
+    <p>
+        Chris heeft eerst geturnd en is daarna gaan voetballen.
+        We zaten toen ook samen in het team. Chris zat op dezelfde
+        basisschool als Beau, Mats en ik, waardoor onze vriendengroep
+        steeds meer bij elkaar kwam.
+    </p>
+
+    <p>
+        Na de basisschool is Chris ook gelijk naar het Vlietland
+        College gegaan, waar hij nu nog steeds vwo doet.
+    </p>
+
+    <p>
+        Chris heeft inmiddels bijna twee jaar een vriendin. Zij heet
+        Tess en zat vroeger ook op het Vlietland College.
+    </p>
+
+    <p>
+        Chris heeft wel een baan en doet dit ook erg goed.
+        Hij is een stuk meer gedisciplineerd dan de anderen!
+        Daarnaast gaat Chris ook naar de gym.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     BIOGRAFIE DOES
+========================= -->
+
+<section class="biografie" id="does-biografie">
+
+    <h2>Biografie Does</h2>
+
+    <p>
+        Does is geboren op 18 januari 2010. Hij heeft eerst een tijd
+        in Den Haag gewoond, totdat hij naar Voorschoten verhuisde.
+        In Voorschoten ging hij naar de Emmaus en heeft hij eigenlijk
+        zijn hele leven gevoetbald.
+    </p>
+
+    <p>
+        Na de basisschool ging Does naar het Adelbert College in
+        Wassenaar, waar hij nu vwo doet. Hij woont aan de andere kant
+        van Voorschoten met zijn ouders en zijn zus Josje.
+    </p>
+
+    <p>
+        We hebben Does leren kennen via het voetbalteam. De connectie
+        werd alleen maar beter toen we met z'n allen op kamp gingen.
+        Sindsdien zijn we beste maatjes.
+    </p>
+
+    <p>
+        Does was vroeger altijd goed bevriend met Jurre, met wie wij
+        ook veel omgingen. Dat is inmiddels al een tijdje veranderd.
+    </p>
+
+    <p>
+        Does werkt ook. Hij werkt bij Domino's, dus als we ooit honger
+        hebben weten we in ieder geval wie we moeten bellen.
+    </p>
+
+    <p>
+        Bij de dames heeft Does voorlopig nog weinig succes, ondanks
+        zijn interesse vanuit de dames. Ook gaat Does niet naar de gym.
+        Hij larp't daarentegen wel heel erg door zichzelf ervan te
+        overtuigen dat hij wél gespierd is.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     BIOGRAFIE XANDER
+========================= -->
+
+<section class="biografie" id="xander-biografie">
+
+    <h2>Biografie Xander van de Weerd</h2>
+
+    <p>
+        Ik ben geboren op 1 mei 2010 en heb mijn hele leven in
+        Voorschoten gewoond. Ik ging naar dezelfde basisschool als
+        Beau, Mats en Chris. Hier is onze vriendschap dan ook ontstaan.
+    </p>
+
+    <p>
+        Tijdens mijn basisschooltijd heb ik eerst op voetbal gezeten,
+        daarna op hockey en tennis, om vervolgens op de middelbare
+        school weer terug te gaan naar voetbal. Daar speelde ik samen
+        met Chris in het team. Uiteindelijk ben ik weer teruggegaan
+        naar hockey.
+    </p>
+
+    <p>
+        Ik zat eerst op het Leonardo, maar ben daarna naar het
+        Vlietland College gegaan. Beau, Mats en Chris kwamen namelijk
+        bij elkaar in de klas te zitten en toen wilde ik natuurlijk
+        niet achterblijven.
+    </p>
+
+    <p>
+        Ik doe nu vwo en heb ook een vriendin, Julise, die eveneens
+        op deze school zit.
+    </p>
+
+    <p>
+        Daarnaast werk ik en ga ik ook naar de gym. Ik mag natuurlijk
+        niet vergeten te vermelden dat ik Beau en Chris met mijn
+        fysieke verschijning regelmatig even aan hun minder goede
+        fysiek herinner.
+    </p>
 
 </section>
 
@@ -478,8 +824,9 @@
 
 
 
-
-<!-- ========================= FOOTER ========================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -488,16 +835,39 @@
 </p>
 
 </footer>
+
+
+
+<!-- =========================
+     SAM
+========================= -->
+
 <div class="sam-link">
-    <a href="#sam-biografie">Sam ▾</a>
+
+    <a href="#sam-biografie">
+        Sam ▾
+    </a>
 
     <div class="sam-dropdown">
-        <a href="#sam-biografie">Biografie</a>
-        <a href="#sam-kwaliteiten">Kwaliteiten</a>
-        <a href="#sam-torrie">Leipste torrie 😂</a>
+
+        <a href="#sam-biografie">
+            Biografie
+        </a>
+
+        <a href="#sam-kwaliteiten">
+            Kwaliteiten
+        </a>
+
+        <a href="#sam-torrie">
+            Leipste torrie 😂
+        </a>
+
     </div>
+
 </div>
+
+
 </body>
 
 </html>
- 
+```
