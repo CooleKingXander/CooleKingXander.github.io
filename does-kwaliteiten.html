@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kwaliteiten Does - Torriehub</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101522;
+    color: white;
+}
+
+nav {
+    background: #182033;
+    padding: 0 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 20px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #00a8ff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 260px;
+    background: #1d273d;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 14px 18px;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* KWALITEITEN */
+
+.kwaliteiten {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px 40px;
+    background: #1b2538;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.kwaliteiten h1 {
+    color: #00a8ff;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.kwaliteiten ul {
+    list-style: none;
+}
+
+.kwaliteiten li {
+    color: #d5dbea;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    padding: 15px 20px;
+    background: #151e30;
+    border-radius: 10px;
+    border-left: 4px solid #00a8ff;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+    text-align: center;
+    background: #0b0f18;
+    color: #8993a8;
+}
+
+@media (max-width: 800px) {
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .kwaliteiten {
+        margin: 40px 20px;
+        padding: 35px 25px;
+    }
+
+    .kwaliteiten h1 {
+        font-size: 35px;
+    }
+
+    .kwaliteiten li {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<ul class="menu">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Mats ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="mats.html">Biografie</a></li>
+            <li><a href="mats-kwaliteiten.html">Kwaliteiten</a></li>
+            <li><a href="mats-torrie.html">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Beau ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="beau.html">Biografie</a></li>
+            <li><a href="beau-kwaliteiten.html">Kwaliteiten</a></li>
+            <li><a href="beau-torrie.html">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Chris ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="chris.html">Biografie</a></li>
+            <li><a href="chris-kwaliteiten.html">Kwaliteiten</a></li>
+            <li><a href="chris-torrie.html">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Does ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="does.html">Biografie</a></li>
+            <li><a href="does-kwaliteiten.html">Kwaliteiten</a></li>
+            <li><a href="does-torrie.html">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        <a href="#">Xander ▾</a>
+
+        <ul class="dropdown-menu">
+
+            <li><a href="xander.html">Biografie</a></li>
+            <li><a href="xander-kwaliteiten.html">Kwaliteiten</a></li>
+            <li><a href="xander-torrie.html">Leipste torrie</a></li>
+
+        </ul>
+
+    </li>
+
+</ul>
+
+</nav>
+
+
+<section class="kwaliteiten">
+
+    <h1>Kwaliteiten van Does</h1>
+
+    <ul>
+
+        <li>
+            Is slim en weet meestal wel waar hij het over heeft.
+        </li>
+
+        <li>
+            Wil het altijd nét iets beter weten.
+        </li>
+
+        <li>
+            Is competitief, wat je uiteindelijk alleen maar aanspoort om zelf beter te worden.
+        </li>
+
+        <li>
+            Is goed in bijna alle games, wat op zichzelf al een hele prestatie is.
+        </li>
+
+        <li>
+            Is in serieuze momenten misschien wel de meest realistische van de groep.
+        </li>
+
+        <li>
+            Geeft vaak het meest logische advies en kan een situatie vanuit meerdere kanten bekijken.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<footer>
+
+<p>
+    © 2026 - Torriehub
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
