@@ -1,345 +1,281 @@
+```html
 <!DOCTYPE html>
-
 <html lang="nl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Mats - Torriehub</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<title>Mats - Torriehub</title>
+        body {
+            font-family: Arial, sans-serif;
+            background: #101522;
+            color: white;
+        }
 
-<style>
+        /* MENU */
+        nav {
+            background: #182033;
+            padding: 0 30px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        .menu {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #101522;
-    color: white;
-}
+        .menu > li {
+            position: relative;
+        }
 
+        .menu a {
+            display: block;
+            padding: 20px 18px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-/* MENU */
+        .menu a:hover,
+        .menu a:focus {
+            background: #00a8ff;
+        }
 
-nav {
-    background: #182033;
-    padding: 0 30px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
-}
+        /* UITKLAPMENU */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #1d273d;
+            list-style: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
 
-.menu {
-    max-width: 1200px;
-    margin: auto;
+        .dropdown-menu li {
+            width: 100%;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        .dropdown-menu a {
+            padding: 14px 18px;
+            font-size: 14px;
+        }
 
-    list-style: none;
-}
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            display: block;
+        }
 
-.menu > li {
-    position: relative;
-}
+        /* BIOGRAFIE */
+        .biografie {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 50px 40px;
+            background: #1b2538;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
 
-.menu a {
-    display: block;
+        .biografie h1 {
+            color: #00a8ff;
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
 
-    padding: 20px 18px;
+        .biografie p {
+            color: #d5dbea;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
 
-    color: white;
-    text-decoration: none;
+        /* KNOPPEN */
+        .pagina-knoppen {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
 
-    font-size: 16px;
-    font-weight: bold;
+        .pagina-knoppen a {
+            display: inline-block;
+            background: #00a8ff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    transition: 0.3s;
-}
+        .pagina-knoppen a:hover {
+            background: #0086cc;
+            transform: translateY(-2px);
+        }
 
-.menu a:hover {
-    background: #00a8ff;
-}
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            background: #0b0f18;
+            color: #8993a8;
+        }
 
+        /* MOBIEL */
+        @media (max-width: 800px) {
+            nav {
+                padding: 0 8px;
+            }
 
-/* DROPDOWN */
+            .menu {
+                flex-wrap: wrap;
+            }
 
-.dropdown-menu {
-    display: none;
+            .menu a {
+                padding: 14px 10px;
+                font-size: 14px;
+            }
 
-    position: absolute;
-    top: 100%;
-    left: 0;
+            .dropdown-menu {
+                min-width: 190px;
+            }
 
-    min-width: 260px;
+            .biografie {
+                margin: 35px 15px;
+                padding: 30px 22px;
+            }
 
-    background: #1d273d;
+            .biografie h1 {
+                font-size: 36px;
+            }
 
-    list-style: none;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    width: 100%;
-}
-
-.dropdown-menu a {
-    padding: 14px 18px;
-    font-size: 14px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-
-/* BIOGRAFIE */
-
-.biografie {
-    max-width: 900px;
-
-    margin: 80px auto;
-
-    padding: 50px 40px;
-
-    background: #1b2538;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
-.biografie h1 {
-    color: #00a8ff;
-
-    text-align: center;
-
-    font-size: 45px;
-
-    margin-bottom: 30px;
-}
-
-.biografie p {
-    color: #d5dbea;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-}
-
-
-/* FOOTER */
-
-footer {
-    margin-top: 80px;
-
-    padding: 30px;
-
-    text-align: center;
-
-    background: #0b0f18;
-
-    color: #8993a8;
-}
-
-
-/* MOBIEL */
-
-@media (max-width: 800px) {
-
-    .menu {
-        flex-wrap: wrap;
-    }
-
-    .menu a {
-        padding: 15px 10px;
-        font-size: 14px;
-    }
-
-}
-
-</style>
-
+            .biografie p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<!-- MENU -->
-
-<nav>
-
-<ul class="menu">
-
-    <li>
-        <a href="index.html">Home</a>
-    </li>
-
-    <li class="dropdown">
-
-        <a href="#">Mats ▾</a>
-
-        <ul class="dropdown-menu">
+    <!-- MENU -->
+    <nav>
+        <ul class="menu">
 
             <li>
-                <a href="mats.html">Biografie</a>
+                <a href="index.html">Home</a>
             </li>
 
-            <li>
-                  <a href="mats-kwaliteiten.html">Kwaliteiten</a>
+            <li class="dropdown">
+                <a href="#">Mats ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="mats.html">Biografie</a></li>
+                    <li><a href="mats-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="mats-torrie.html">Leipste torrie 😂</a></li>
+                </ul>
             </li>
 
-            <li>
-                <a href="mats.html#torrie">Leipste torrie</a>
+            <li class="dropdown">
+                <a href="#">Beau ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="beau.html">Biografie</a></li>
+                    <li><a href="beau-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="beau-torrie.html">Leipste torrie 😂</a></li>
+                </ul>
             </li>
 
-        </ul>
-
-    </li>
-
-    <li class="dropdown">
-
-        <a href="#">Beau ▾</a>
-
-        <ul class="dropdown-menu">
-
-            <li>
-                <a href="beau.html">Biografie</a>
+            <li class="dropdown">
+                <a href="#">Chris ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="chris.html">Biografie</a></li>
+                    <li><a href="chris-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="chris-torrie.html">Leipste torrie 😂</a></li>
+                </ul>
             </li>
 
-            <li>
-                <a href="beau.html#kwaliteiten">Kwaliteiten</a>
+            <li class="dropdown">
+                <a href="#">Does ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="does.html">Biografie</a></li>
+                    <li><a href="does-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="does-torrie.html">Leipste torrie 😂</a></li>
+                </ul>
             </li>
 
-            <li>
-                <a href="beau.html#torrie">Leipste torrie</a>
-            </li>
-
-        </ul>
-
-    </li>
-
-    <li class="dropdown">
-
-        <a href="#">Chris ▾</a>
-
-        <ul class="dropdown-menu">
-
-            <li>
-                <a href="chris.html">Biografie</a>
-            </li>
-
-            <li>
-                <a href="chris.html#kwaliteiten">Kwaliteiten</a>
-            </li>
-
-            <li>
-                <a href="chris.html#torrie">Leipste torrie</a>
+            <li class="dropdown">
+                <a href="#">Xander ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="xander.html">Biografie</a></li>
+                    <li><a href="xander-kwaliteiten.html">Kwaliteiten</a></li>
+                </ul>
             </li>
 
         </ul>
+    </nav>
 
-    </li>
+    <!-- BIOGRAFIE MATS -->
+    <main>
+        <section class="biografie">
+            <h1>Mats</h1>
 
-    <li class="dropdown">
+            <p>
+                Mats is geboren op 25 oktober 2010 en groeide op in
+                Voorschoten. Ik heb Mats leren kennen op de basisschool.
+                We hebben daar samen heel veel leuke dingen meegemaakt,
+                waaronder natuurlijk vele partijtjes.
+            </p>
 
-        <a href="#">Does ▾</a>
+            <p>
+                Mats zijn ouders zijn gescheiden en hij heeft een heel
+                knap zusje dat iets jonger is dan hij, genaamd Ella.
+                Zijn ouders zijn ook erg rijk, wat de meet-ups altijd
+                extra leuk maakt, omdat we dan lekker in zijn
+                megawoningen kunnen zitten.
+            </p>
 
-        <ul class="dropdown-menu">
+            <p>
+                Mats doet hockey en is na de basisschool naar het
+                Vlietland College gegaan, waar hij nu vwo doet.
+            </p>
 
-            <li>
-                <a href="does.html">Biografie</a>
-            </li>
+            <p>
+                Mats heeft nog nooit gewerkt in zijn leven. De vraag is
+                dan ook maar of hij dat ooit wel gaat doen. Hij gaat
+                helaas ook niet naar de gym.
+            </p>
 
-            <li>
-                <a href="does.html#kwaliteiten">Kwaliteiten</a>
-            </li>
+            <!-- LINKS NAAR DE ANDERE PAGINA'S -->
+            <div class="pagina-knoppen">
+                <a href="mats-kwaliteiten.html">Mats' kwaliteiten</a>
+                <a href="mats-torrie.html">Mats' leipste torrie 😂</a>
+            </div>
+        </section>
+    </main>
 
-            <li>
-                <a href="does.html#torrie">Leipste torrie</a>
-            </li>
-
-        </ul>
-
-    </li>
-
-    <li class="dropdown">
-
-        <a href="#">Xander ▾</a>
-
-        <ul class="dropdown-menu">
-
-            <li>
-                <a href="xander.html">Biografie</a>
-            </li>
-
-            <li>
-                <a href="xander.html#kwaliteiten">Kwaliteiten</a>
-            </li>
-
-            <li>
-                <a href="xander.html#torrie">Leipste torrie</a>
-            </li>
-
-        </ul>
-
-    </li>
-
-</ul>
-
-</nav>
-<!-- BIOGRAFIE MATS -->
-
-<section class="biografie">
-
-    <h1 id="mats-biografie">Mats</h1>
-
-    <p>
-        Mats is geboren op 25 oktober 2010 en groeide op in Voorschoten.
-        Ik heb Mats leren kennen op de basisschool. We hebben daar
-        samen heel veel leuke dingen meegemaakt, waaronder natuurlijk
-        vele partijtjes.
-    </p>
-
-    <p>
-        Mats zijn ouders zijn gescheiden en hij heeft een heel knap
-        zusje dat iets jonger is dan hij, genaamd Ella. Zijn ouders
-        zijn ook erg rijk, wat de meet-ups altijd extra leuk maakt,
-        omdat we dan lekker in zijn megawoningen kunnen zitten.
-    </p>
-
-    <p>
-        Mats doet hockey en is na de basisschool naar het
-        Vlietland College gegaan, waar hij nu vwo doet.
-    </p>
-
-    <p>
-        Mats heeft nog nooit gewerkt in zijn leven. De vraag is dan
-        ook maar of hij dat ooit wel gaat doen. Hij gaat helaas ook
-        niet naar de gym.
-    </p>
-
-</section>
-
-
-<footer>
-
-<p>
-    © 2026 - Torriehub
-</p>
-
-</footer>
-
+    <footer>
+        <p>© 2026 - Torriehub</p>
+    </footer>
 
 </body>
+</html>
+```
