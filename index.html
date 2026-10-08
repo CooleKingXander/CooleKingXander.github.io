@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -20,19 +19,19 @@
             color: white;
         }
 
-        /* MENU */
         nav {
             background: #182033;
-            padding: 0 30px;
+            padding: 0 20px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.4);
         }
 
         .menu {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             list-style: none;
         }
 
@@ -42,20 +41,18 @@
 
         .menu a {
             display: block;
-            padding: 20px 18px;
+            padding: 18px 14px;
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .menu a:hover {
             background: #00a8ff;
-            color: white;
         }
 
-        /* DROPDOWNMENU */
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -68,12 +65,8 @@
             z-index: 1000;
         }
 
-        .dropdown-menu li {
-            width: 100%;
-        }
-
         .dropdown-menu a {
-            padding: 14px 18px;
+            padding: 13px 16px;
             font-size: 14px;
         }
 
@@ -82,53 +75,50 @@
             display: block;
         }
 
-        /* HOMEPAGINA */
         .home {
             max-width: 900px;
-            margin: 70px auto;
+            margin: 60px auto 30px;
             padding: 40px 30px;
             text-align: center;
         }
 
         .home h1 {
-            font-size: 50px;
+            font-size: 48px;
             color: #00a8ff;
             margin-bottom: 25px;
         }
 
         .home p {
-            font-size: 20px;
+            font-size: 19px;
             line-height: 1.7;
             color: #d5dbea;
             margin-bottom: 20px;
         }
 
-        /* VRIENDEN */
         .vrienden {
             max-width: 1200px;
             margin: auto;
-            padding: 30px 30px 60px;
+            padding: 30px;
         }
 
         .vrienden h2 {
             text-align: center;
-            font-size: 35px;
-            margin-bottom: 40px;
+            font-size: 34px;
+            margin-bottom: 35px;
         }
 
         .vrienden-container {
             display: grid;
             grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 20px;
+            gap: 18px;
         }
 
         .vriend {
             background: #1b2538;
-            padding: 25px 12px;
+            padding: 24px 12px;
             border-radius: 12px;
             text-align: center;
             transition: 0.3s;
-            min-width: 0;
         }
 
         .vriend:hover {
@@ -159,16 +149,14 @@
             background: #0086cc;
         }
 
-        /* FOOTER */
         footer {
-            margin-top: 40px;
+            margin-top: 50px;
             padding: 30px;
             text-align: center;
             background: #0b0f18;
             color: #8993a8;
         }
 
-        /* SAM-LINK */
         .sam-link {
             position: fixed;
             bottom: 10px;
@@ -180,10 +168,6 @@
         .sam-link > a {
             color: #777;
             text-decoration: none;
-        }
-
-        .sam-link > a:hover {
-            color: #00a8ff;
         }
 
         .sam-dropdown {
@@ -201,11 +185,6 @@
             padding: 8px 12px;
             color: white;
             text-decoration: none;
-            font-size: 12px;
-        }
-
-        .sam-dropdown a:hover {
-            background: #00a8ff;
         }
 
         .sam-link:hover .sam-dropdown,
@@ -213,27 +192,13 @@
             display: block;
         }
 
-        /* MOBIEL */
         @media (max-width: 1000px) {
-            .menu {
-                flex-wrap: wrap;
-            }
-
             .vrienden-container {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 500px) {
-            nav {
-                padding: 0 8px;
-            }
-
-            .menu a {
-                padding: 12px 9px;
-                font-size: 13px;
-            }
-
+        @media (max-width: 600px) {
             .home h1 {
                 font-size: 36px;
             }
@@ -245,18 +210,21 @@
             .vrienden-container {
                 grid-template-columns: 1fr;
             }
+
+            .menu a {
+                padding: 12px 9px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- MENU -->
+    <!-- HOOFDMENU -->
     <nav>
         <ul class="menu">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+            <li><a href="index.html">Home</a></li>
 
             <li class="dropdown">
                 <a href="#">Mats ▾</a>
@@ -299,7 +267,6 @@
                 <ul class="dropdown-menu">
                     <li><a href="xander.html">Biografie</a></li>
                     <li><a href="xander-kwaliteiten.html">Kwaliteiten</a></li>
-                    <li><a href="xander-torrie.html">Leipste torrie</a></li>
                 </ul>
             </li>
 
@@ -319,17 +286,16 @@
         </ul>
     </nav>
 
-    <!-- HOMEPAGINA -->
+    <!-- WELKOM -->
     <main>
         <section class="home">
             <h1>Welkom op Torriehub!</h1>
 
             <p>
                 Wij zijn vijf vrienden uit Voorschoten.
-                Op deze website ga ik vertellen over mijn beste vrienden
-                (de torries dus) en over mijzelf. Ook bespreken we natuurlijk
-                verschillende onderwerpen over informatica en technologie,
-                die uiteraard ook heel belangrijk zijn!
+                Op deze website vertel ik over mijn beste vrienden,
+                de torries dus, en over mijzelf. Ook bespreken we
+                verschillende onderwerpen over informatica en technologie!
             </p>
 
             <p>
@@ -341,7 +307,7 @@
             </p>
         </section>
 
-        <!-- ONZE VIJF VRIENDEN -->
+        <!-- VRIENDEN -->
         <section class="vrienden">
             <h2>Geheime info over</h2>
 
@@ -351,24 +317,28 @@
                     <h3>Mats</h3>
                     <a href="mats.html">Biografie</a>
                     <a href="mats-kwaliteiten.html">Kwaliteiten</a>
+                    <a href="mats-torrie.html">Leipste torrie 😂</a>
                 </div>
 
                 <div class="vriend">
                     <h3>Beau</h3>
                     <a href="beau.html">Biografie</a>
                     <a href="beau-kwaliteiten.html">Kwaliteiten</a>
+                    <a href="beau-torrie.html">Leipste torrie 😂</a>
                 </div>
 
                 <div class="vriend">
                     <h3>Chris</h3>
                     <a href="chris.html">Biografie</a>
                     <a href="chris-kwaliteiten.html">Kwaliteiten</a>
+                    <a href="chris-torrie.html">Leipste torrie 😂</a>
                 </div>
 
                 <div class="vriend">
                     <h3>Does</h3>
                     <a href="does.html">Biografie</a>
                     <a href="does-kwaliteiten.html">Kwaliteiten</a>
+                    <a href="does-torrie.html">Leipste torrie 😂</a>
                 </div>
 
                 <div class="vriend">
@@ -381,18 +351,16 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>© 2026 - Mijn website</p>
     </footer>
 
-    <!-- SAM -->
     <div class="sam-link">
         <a href="sam.html">Sam ▾</a>
         <div class="sam-dropdown">
             <a href="sam.html">Biografie</a>
             <a href="sam-kwaliteiten.html">Kwaliteiten</a>
-            <a href="sam-torrie.html">Leipste torrie 😂</a>
+            <a href="sam-torrie.html">Leipste torrie</a>
         </div>
     </div>
 
