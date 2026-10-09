@@ -1,5 +1,4 @@
 
-```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,68 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoer, verwerking en uitvoer - Torriehub</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .ivo-pagina {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            color: #333;
-        }
-
-        .ivo-pagina h1 {
-            color: #234b79;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .ivo-pagina h2 {
-            color: #234b79;
-            font-size: 23px;
-            margin-top: 28px;
-        }
-
-        .ivo-pagina p {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .ivo-afbeelding {
-            display: block;
-            width: 100%;
-            max-width: 650px;
-            height: auto;
-            margin: 25px auto;
-            border-radius: 8px;
-        }
-
-        .ivo-inhoud {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        @media (max-width: 600px) {
-            .ivo-pagina {
-                padding: 12px;
-                margin: 15px auto;
-            }
-
-            .ivo-inhoud {
-                padding: 20px;
-            }
-
-            .ivo-pagina h1 {
-                font-size: 27px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
+    <!-- HOOFDMENU -->
     <nav>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -76,6 +18,7 @@
             <li class="dropdown">
                 <a href="#">Informatica ▾</a>
                 <ul class="dropdown-menu">
+                    <li><a href="informatica-onderwerpen.html">Alle informatica-onderwerpen</a></li>
                     <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li>
                     <li><a href="binair.html">Binair stelsel</a></li>
                     <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
@@ -89,57 +32,56 @@
         </ul>
     </nav>
 
-    <main class="ivo-pagina">
-        <div class="ivo-inhoud">
+    <main>
+
+        <section class="biografie">
 
             <h1>Invoer, verwerking en uitvoer</h1>
 
             <p>
-                Een computer werkt vaak volgens drie stappen: invoer,
-                verwerking en uitvoer. Eerst krijgt het apparaat informatie
-                binnen. Daarna verwerkt het die informatie en uiteindelijk
-                krijg je een resultaat.
+                Bijna elk apparaat werkt met invoer, verwerking en uitvoer.
+                Eerst voer je iets in, daarna verwerkt het apparaat die
+                informatie en uiteindelijk krijg je een resultaat.
             </p>
 
             <p>
-                Bij <strong>invoer</strong> geef je informatie aan een apparaat.
-                Dat kan bijvoorbeeld door te typen op een toetsenbord,
+                <strong>Invoer:</strong> je geeft informatie aan een apparaat.
+                Dat kan bijvoorbeeld door iets te typen op je toetsenbord,
                 met je muis te klikken of iets in te spreken op je telefoon.
             </p>
 
             <p>
-                Bij <strong>verwerking</strong> voert de computer opdrachten uit.
-                Een programma bepaalt wat er met de ingevoerde informatie
-                moet gebeuren.
+                <strong>Verwerking:</strong> de computer verwerkt de informatie
+                met behulp van een programma en voert de bijbehorende opdrachten uit.
             </p>
 
             <p>
-                Bij <strong>uitvoer</strong> krijg je het resultaat te zien
-                of te horen. Dat kan bijvoorbeeld op een beeldscherm,
-                via een luidspreker of door een printer.
+                <strong>Uitvoer:</strong> de computer laat het resultaat zien
+                of horen. Dit kan bijvoorbeeld op je scherm, via luidsprekers
+                of met een printer.
             </p>
 
             <img
-                class="ivo-afbeelding"
-                src="https://placehold.co/650x220/e8eef6/234b79?text=Invoer+%E2%86%92+Verwerking+%E2%86%92+Uitvoer"
-                alt="Schema van invoer naar verwerking en uitvoer">
+                src="https://placehold.co/650x200/eeeeee/333333?text=Invoer+%E2%86%92+Verwerking+%E2%86%92+Uitvoer"
+                alt="Schema van invoer, verwerking en uitvoer"
+                style="display: block; max-width: 100%; height: auto; margin: 20px auto;">
 
-            <h2>Een voorbeeld</h2>
+            <h2>Voorbeeld</h2>
 
             <p>
-                Stel dat je een rekenmachine gebruikt om 5 + 3 uit te rekenen.
-                Je typt de getallen in. Dat is de invoer. De rekenmachine
-                berekent de som. Dat is de verwerking. Daarna verschijnt
-                het antwoord 8 op het scherm. Dat is de uitvoer.
+                Als je op je rekenmachine 5 + 3 invoert, is dat de invoer.
+                De rekenmachine rekent de som uit. Dat is de verwerking.
+                Daarna verschijnt het antwoord 8 op het scherm. Dat is de uitvoer.
             </p>
 
             <p>
-                Hetzelfde gebeurt als je een bericht op je telefoon typt.
-                De telefoon verwerkt de tekst en laat het bericht vervolgens
-                op het scherm zien of verstuurt het naar iemand anders.
+                Hetzelfde gebeurt wanneer je een bericht op je telefoon typt.
+                Je typt de tekst als invoer, de telefoon verwerkt de informatie
+                en vervolgens wordt het bericht getoond of verstuurd.
             </p>
 
-        </div>
+        </section>
+
     </main>
 
     <footer>
