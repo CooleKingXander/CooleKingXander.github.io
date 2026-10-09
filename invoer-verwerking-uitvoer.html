@@ -1,19 +1,124 @@
 
+<```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informatica - Torriehub</title>
-
-    <!-- Verbindt de pagina met de bestaande vormgeving -->
+    <title>Invoer, verwerking en uitvoer - Torriehub</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ivo-pagina {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        .ivo-intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .ivo-intro h1 {
+            color: #234b79;
+            font-size: 32px;
+        }
+
+        .ivo-intro p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .ivo-kaart {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .ivo-kaart h2 {
+            color: #234b79;
+            margin-top: 0;
+        }
+
+        .ivo-kaart p {
+            line-height: 1.7;
+        }
+
+        .ivo-stappen {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .ivo-stap {
+            flex: 1;
+            text-align: center;
+            background: #f3f6fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .ivo-stap img {
+            width: 100%;
+            height: 145px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .ivo-stap h3 {
+            color: #234b79;
+            margin-bottom: 8px;
+        }
+
+        .ivo-pijl {
+            align-self: center;
+            font-size: 25px;
+            color: #234b79;
+        }
+
+        .ivo-voorbeeld {
+            background: #f3f6fa;
+            padding: 20px;
+            border-left: 4px solid #234b79;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .ivo-voorbeeld img {
+            display: block;
+            max-width: 260px;
+            width: 100%;
+            margin: 15px auto;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 650px) {
+            .ivo-stappen {
+                flex-direction: column;
+            }
+
+            .ivo-pijl {
+                transform: rotate(90deg);
+            }
+
+            .ivo-intro h1 {
+                font-size: 27px;
+            }
+
+            .ivo-kaart {
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
 
-<!DOCTYPE html> <html lang="nl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Informatica - Torriehub</title> <link rel="stylesheet" href="style.css"> <style> /* Alleen voor deze informatica-pagina */ .info-pagina { max-width: 1050px; margin: 40px auto; padding: 20px; color: #1e293b; } .info-header { background: linear-gradient(135deg, #172554, #2563eb); color: white; padding: 45px 30px; border-radius: 22px; text-align: center; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18); } .info-header h1 { font-size: 38px; margin: 0 0 12px; } .info-header p { font-size: 17px; margin: 0; color: #dbeafe; } .info-kaart { background: white; padding: 30px; border-radius: 18px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07); border: 1px solid #e2e8f0; } .info-kaart h2 { color: #1d4ed8; font-size: 26px; margin-top: 0; } .info-kaart h3 { color: #334155; margin-top: 25px; } .info-kaart p { line-height: 1.8; color: #475569; font-size: 16px; } .info-stappen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 25px 0; } .info-stap { background: #eff6ff; padding: 25px 15px; text-align: center; border-radius: 15px; border-bottom: 4px solid #3b82f6; } .info-stap:nth-child(2) { background: #f5f3ff; border-bottom-color: #8b5cf6; } .info-stap:nth-child(3) { background: #ecfdf5; border-bottom-color: #10b981; } .info-icoon { font-size: 38px; margin-bottom: 10px; } .info-stap h3 { margin: 5px 0 10px; font-size: 18px; } .info-stap p { font-size: 14px; margin: 0; line-height: 1.6; } .info-voorbeeld { background: #f8fafc; border-left: 5px solid #3b82f6; padding: 20px; border-radius: 10px; margin-top: 20px; } .info-som { font-size: 25px; font-weight: bold; color: #1d4ed8; text-align: center; margin: 15px 0; } .info-terug { display: inline-block; background: #2563eb; color: white; padding: 12px 20px; text-decoration: none; border-radius: 10px; margin-top: 10px; transition: background 0.2s, transform 0.2s; } .info-terug:hover { background: #1d4ed8; transform: translateY(-2px); } @media (max-width: 650px) { .info-pagina { margin: 20px auto; padding: 14px; } .info-header { padding: 32px 18px; } .info-header h1 { font-size: 30px; } .info-kaart { padding: 22px 18px; } .info-stappen { grid-template-columns: 1fr; } } </style> </head> <body> <nav> <ul class="menu"> <li><a href="index.html">Home</a></li> <li class="dropdown"> <a href="#">Informatica ▾</a> <ul class="dropdown-menu"> <li><a href="informatica-onderwerpen.html">Alle informatica-onderwerpen</a></li> <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li> <li><a href="binair.html">Binair stelsel</a></li> <li><a href="kleurmodellen.html">Kleurmodellen</a></li> <li><a href="compressie.html">Compressie: Bitmap / Vector</a></li> <li><a href="ai.html">AI</a></li> <li><a href="ai-gebruik.html">Waar gebruik ik AI voor?</a></li> <li><a href="ai-mobiel.html">AI in mijn mobiel</a></li> <li><a href="ai-artikel.html">AI-artikel</a></li> </ul> </li> </ul> </nav> <main class="info-pagina"> <header class="info-header"> <h1>💻 Informatica</h1> <p>Ontdek hoe computers werken en hoe technologie ons dagelijks leven beïnvloedt.</p> </header> <section class="info-kaart"> <h2>1. Invoer, verwerking en uitvoer</h2> <p> Bijna elk digitaal apparaat werkt volgens drie stappen. Je voert informatie in, het apparaat verwerkt deze informatie en daarna krijg je een resultaat. </p> <div class="info-stappen"> <div class="info-stap"> <div class="info-icoon">⌨️</div> <h3>1. Invoer</h3> <p>Je geeft informatie aan een apparaat, bijvoorbeeld door iets te typen.</p> </div> <div class="info-stap"> <div class="info-icoon">⚙️</div> <h3>2. Verwerking</h3> <p>De computer verwerkt de informatie met behulp van een programma.</p> </div> <div class="info-stap"> <div class="info-icoon">🖥️</div> <h3>3. Uitvoer</h3> <p>Het apparaat geeft een resultaat, bijvoorbeeld op je scherm.</p> </div> </div> </section> <section class="info-kaart"> <h2>🧮 Een voorbeeld uit het dagelijks leven</h2> <p> Stel dat je de som 5 + 3 invoert op een rekenmachine. Zo werken de drie stappen: </p> <div class="info-voorbeeld"> <p><strong>Invoer:</strong> je voert de getallen 5 en 3 in.</p> <p><strong>Verwerking:</strong> de rekenmachine telt de getallen bij elkaar op.</p> <p><strong>Uitvoer:</strong> de rekenmachine toont het antwoord.</p> <div class="info-som">5 + 3 = 8</div> </div> </section> <section class="info-kaart"> <h2>📚 Meer leren over informatica?</h2> <p> Bekijk ook de andere onderwerpen van Torriehub, zoals het binaire stelsel, kleurmodellen, compressie en kunstmatige intelligentie. </p> <a class="info-terug" href="informatica-onderwerpen.html"> Bekijk alle onderwerpen → </a> </section> </main> <footer> <p>© 2026 - Torriehub</p> </footer> </body> </html>
 <body>
 
-    <!-- HOOFDMENU -->
     <nav>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -21,7 +126,6 @@
             <li class="dropdown">
                 <a href="#">Informatica ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="informatica-onderwerpen.html">Alle informatica-onderwerpen</a></li>
                     <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li>
                     <li><a href="binair.html">Binair stelsel</a></li>
                     <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
@@ -35,51 +139,117 @@
         </ul>
     </nav>
 
-    <!-- INHOUD VAN DE PAGINA -->
-    <main>
+    <main class="ivo-pagina">
 
-        <!-- ONDERWERP 1: INVOER, VERWERKING EN UITVOER -->
-        <section class="biografie">
-            <h2>1. Invoer, verwerking en uitvoer</h2>
+        <header class="ivo-intro">
+            <h1>Invoer, verwerking en uitvoer</h1>
+            <p>
+                Een computer voert verschillende stappen uit om informatie
+                te verwerken. Dat gebeurt bij bijna alles wat je op een
+                computer, telefoon of ander apparaat doet.
+            </p>
+        </header>
 
-            <h3>Wat betekent het?</h3>
+        <section class="ivo-kaart">
+            <h2>Hoe werkt het?</h2>
 
             <p>
-                Bijna elk apparaat werkt met invoer, verwerking en uitvoer.
-                Eerst voer je iets in, daarna verwerkt het apparaat die
-                informatie en uiteindelijk krijg je een resultaat.
+                Het proces bestaat uit drie onderdelen. Eerst krijgt een
+                apparaat informatie binnen. Daarna wordt die informatie
+                verwerkt en uiteindelijk komt er een resultaat uit.
+            </p>
+
+            <div class="ivo-stappen">
+
+                <div class="ivo-stap">
+                    <img
+                        src="https://placehold.co/300x180/e8eef6/234b79?text=Invoer"
+                        alt="Illustratie van invoer">
+                    <h3>1. Invoer</h3>
+                    <p>
+                        Je geeft informatie door, bijvoorbeeld door iets
+                        te typen met een toetsenbord.
+                    </p>
+                </div>
+
+                <div class="ivo-pijl">→</div>
+
+                <div class="ivo-stap">
+                    <img
+                        src="https://placehold.co/300x180/e8eef6/234b79?text=Verwerking"
+                        alt="Illustratie van verwerking">
+                    <h3>2. Verwerking</h3>
+                    <p>
+                        De computer voert opdrachten uit en verwerkt
+                        de ingevoerde informatie.
+                    </p>
+                </div>
+
+                <div class="ivo-pijl">→</div>
+
+                <div class="ivo-stap">
+                    <img
+                        src="https://placehold.co/300x180/e8eef6/234b79?text=Uitvoer"
+                        alt="Illustratie van uitvoer">
+                    <h3>3. Uitvoer</h3>
+                    <p>
+                        Je krijgt het resultaat te zien, bijvoorbeeld
+                        op een beeldscherm.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="ivo-kaart">
+            <h2>Een voorbeeld: de rekenmachine</h2>
+
+            <p>
+                Een rekenmachine laat goed zien hoe invoer, verwerking
+                en uitvoer werken.
+            </p>
+
+            <div class="ivo-voorbeeld">
+                <p><strong>Invoer:</strong> je typt de som 5 + 3 in.</p>
+
+                <p>
+                    <strong>Verwerking:</strong> de rekenmachine berekent
+                    de uitkomst van de som.
+                </p>
+
+                <p>
+                    <strong>Uitvoer:</strong> het antwoord 8 verschijnt
+                    op het scherm.
+                </p>
+
+                <img
+                    src="https://placehold.co/400x220/f1f1f1/333333?text=5+%2B+3+%3D+8"
+                    alt="Voorbeeld van een berekening op een rekenmachine">
+            </div>
+        </section>
+
+        <section class="ivo-kaart">
+            <h2>Waar zie je dit nog meer?</h2>
+
+            <p>
+                Dit proces kom je overal tegen. Als je een bericht typt
+                op je telefoon, is het typen de invoer. Je telefoon
+                verwerkt de tekst en verstuurt het bericht. De bevestiging
+                dat het bericht is verzonden, is een vorm van uitvoer.
             </p>
 
             <p>
-                <strong>Invoer:</strong> je geeft informatie aan een apparaat,
-                bijvoorbeeld door iets te typen op je toetsenbord.
-            </p>
-
-            <p>
-                <strong>Verwerking:</strong> de computer verwerkt de informatie
-                met behulp van een programma.
-            </p>
-
-            <p>
-                <strong>Uitvoer:</strong> de computer laat het resultaat zien,
-                bijvoorbeeld op je scherm.
-            </p>
-
-            <h3>Voorbeeld</h3>
-
-            <p>
-                Als je op je rekenmachine 5 + 3 invoert, is dat de invoer.
-                De rekenmachine rekent de som uit. Dat is de verwerking.
-                Daarna verschijnt 8 op het scherm. Dat is de uitvoer.
+                Ook bij gamen, foto's maken en video's bekijken worden
+                invoer, verwerking en uitvoer gebruikt.
             </p>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>© 2026 - Torriehub</p>
     </footer>
 
 </body>
 </html>
+```
