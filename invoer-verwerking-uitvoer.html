@@ -1,5 +1,5 @@
 
-<```html
+```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -10,108 +10,58 @@
 
     <style>
         .ivo-pagina {
-            max-width: 950px;
-            margin: 35px auto;
+            max-width: 900px;
+            margin: 30px auto;
             padding: 20px;
             color: #333;
         }
 
-        .ivo-intro {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .ivo-intro h1 {
+        .ivo-pagina h1 {
             color: #234b79;
             font-size: 32px;
+            margin-bottom: 20px;
         }
 
-        .ivo-intro p {
-            font-size: 17px;
-            line-height: 1.7;
+        .ivo-pagina h2 {
+            color: #234b79;
+            font-size: 23px;
+            margin-top: 28px;
         }
 
-        .ivo-kaart {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
+        .ivo-pagina p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .ivo-afbeelding {
+            display: block;
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 8px;
+        }
+
+        .ivo-inhoud {
+            background: #fff;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .ivo-kaart h2 {
-            color: #234b79;
-            margin-top: 0;
-        }
-
-        .ivo-kaart p {
-            line-height: 1.7;
-        }
-
-        .ivo-stappen {
-            display: flex;
-            align-items: stretch;
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .ivo-stap {
-            flex: 1;
-            text-align: center;
-            background: #f3f6fa;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .ivo-stap img {
-            width: 100%;
-            height: 145px;
-            object-fit: contain;
-            border-radius: 5px;
-        }
-
-        .ivo-stap h3 {
-            color: #234b79;
-            margin-bottom: 8px;
-        }
-
-        .ivo-pijl {
-            align-self: center;
-            font-size: 25px;
-            color: #234b79;
-        }
-
-        .ivo-voorbeeld {
-            background: #f3f6fa;
-            padding: 20px;
-            border-left: 4px solid #234b79;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-
-        .ivo-voorbeeld img {
-            display: block;
-            max-width: 260px;
-            width: 100%;
-            margin: 15px auto;
-            border-radius: 6px;
-        }
-
-        @media (max-width: 650px) {
-            .ivo-stappen {
-                flex-direction: column;
+        @media (max-width: 600px) {
+            .ivo-pagina {
+                padding: 12px;
+                margin: 15px auto;
             }
 
-            .ivo-pijl {
-                transform: rotate(90deg);
+            .ivo-inhoud {
+                padding: 20px;
             }
 
-            .ivo-intro h1 {
+            .ivo-pagina h1 {
                 font-size: 27px;
-            }
-
-            .ivo-kaart {
-                padding: 18px;
             }
         }
     </style>
@@ -140,110 +90,56 @@
     </nav>
 
     <main class="ivo-pagina">
+        <div class="ivo-inhoud">
 
-        <header class="ivo-intro">
             <h1>Invoer, verwerking en uitvoer</h1>
-            <p>
-                Een computer voert verschillende stappen uit om informatie
-                te verwerken. Dat gebeurt bij bijna alles wat je op een
-                computer, telefoon of ander apparaat doet.
-            </p>
-        </header>
-
-        <section class="ivo-kaart">
-            <h2>Hoe werkt het?</h2>
 
             <p>
-                Het proces bestaat uit drie onderdelen. Eerst krijgt een
-                apparaat informatie binnen. Daarna wordt die informatie
-                verwerkt en uiteindelijk komt er een resultaat uit.
-            </p>
-
-            <div class="ivo-stappen">
-
-                <div class="ivo-stap">
-                    <img
-                        src="https://placehold.co/300x180/e8eef6/234b79?text=Invoer"
-                        alt="Illustratie van invoer">
-                    <h3>1. Invoer</h3>
-                    <p>
-                        Je geeft informatie door, bijvoorbeeld door iets
-                        te typen met een toetsenbord.
-                    </p>
-                </div>
-
-                <div class="ivo-pijl">→</div>
-
-                <div class="ivo-stap">
-                    <img
-                        src="https://placehold.co/300x180/e8eef6/234b79?text=Verwerking"
-                        alt="Illustratie van verwerking">
-                    <h3>2. Verwerking</h3>
-                    <p>
-                        De computer voert opdrachten uit en verwerkt
-                        de ingevoerde informatie.
-                    </p>
-                </div>
-
-                <div class="ivo-pijl">→</div>
-
-                <div class="ivo-stap">
-                    <img
-                        src="https://placehold.co/300x180/e8eef6/234b79?text=Uitvoer"
-                        alt="Illustratie van uitvoer">
-                    <h3>3. Uitvoer</h3>
-                    <p>
-                        Je krijgt het resultaat te zien, bijvoorbeeld
-                        op een beeldscherm.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="ivo-kaart">
-            <h2>Een voorbeeld: de rekenmachine</h2>
-
-            <p>
-                Een rekenmachine laat goed zien hoe invoer, verwerking
-                en uitvoer werken.
-            </p>
-
-            <div class="ivo-voorbeeld">
-                <p><strong>Invoer:</strong> je typt de som 5 + 3 in.</p>
-
-                <p>
-                    <strong>Verwerking:</strong> de rekenmachine berekent
-                    de uitkomst van de som.
-                </p>
-
-                <p>
-                    <strong>Uitvoer:</strong> het antwoord 8 verschijnt
-                    op het scherm.
-                </p>
-
-                <img
-                    src="https://placehold.co/400x220/f1f1f1/333333?text=5+%2B+3+%3D+8"
-                    alt="Voorbeeld van een berekening op een rekenmachine">
-            </div>
-        </section>
-
-        <section class="ivo-kaart">
-            <h2>Waar zie je dit nog meer?</h2>
-
-            <p>
-                Dit proces kom je overal tegen. Als je een bericht typt
-                op je telefoon, is het typen de invoer. Je telefoon
-                verwerkt de tekst en verstuurt het bericht. De bevestiging
-                dat het bericht is verzonden, is een vorm van uitvoer.
+                Een computer werkt vaak volgens drie stappen: invoer,
+                verwerking en uitvoer. Eerst krijgt het apparaat informatie
+                binnen. Daarna verwerkt het die informatie en uiteindelijk
+                krijg je een resultaat.
             </p>
 
             <p>
-                Ook bij gamen, foto's maken en video's bekijken worden
-                invoer, verwerking en uitvoer gebruikt.
+                Bij <strong>invoer</strong> geef je informatie aan een apparaat.
+                Dat kan bijvoorbeeld door te typen op een toetsenbord,
+                met je muis te klikken of iets in te spreken op je telefoon.
             </p>
-        </section>
 
+            <p>
+                Bij <strong>verwerking</strong> voert de computer opdrachten uit.
+                Een programma bepaalt wat er met de ingevoerde informatie
+                moet gebeuren.
+            </p>
+
+            <p>
+                Bij <strong>uitvoer</strong> krijg je het resultaat te zien
+                of te horen. Dat kan bijvoorbeeld op een beeldscherm,
+                via een luidspreker of door een printer.
+            </p>
+
+            <img
+                class="ivo-afbeelding"
+                src="https://placehold.co/650x220/e8eef6/234b79?text=Invoer+%E2%86%92+Verwerking+%E2%86%92+Uitvoer"
+                alt="Schema van invoer naar verwerking en uitvoer">
+
+            <h2>Een voorbeeld</h2>
+
+            <p>
+                Stel dat je een rekenmachine gebruikt om 5 + 3 uit te rekenen.
+                Je typt de getallen in. Dat is de invoer. De rekenmachine
+                berekent de som. Dat is de verwerking. Daarna verschijnt
+                het antwoord 8 op het scherm. Dat is de uitvoer.
+            </p>
+
+            <p>
+                Hetzelfde gebeurt als je een bericht op je telefoon typt.
+                De telefoon verwerkt de tekst en laat het bericht vervolgens
+                op het scherm zien of verstuurt het naar iemand anders.
+            </p>
+
+        </div>
     </main>
 
     <footer>
