@@ -239,3 +239,56 @@ footer {
         font-size: 13px;
     }
 }
+
+/* Informatica-pagina: tekst beter leesbaar maken */
+.biografie {
+    line-height: 1.8;
+    padding: 25px;
+}
+
+/* Hoofdtitel */
+.biografie h1 {
+    color: #234b79;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Tussenkopjes */
+.biografie h2 {
+    color: #234b79;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Alinea's meer ruimte geven */
+.biografie p {
+    margin-top: 0;
+    margin-bottom: 22px;
+    line-height: 1.9;
+}
+
+/* Afbeelding */
+.biografie img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 6px;
+}
+
+/* Ook goed leesbaar op mobiel */
+@media (max-width: 600px) {
+    .biografie {
+        padding: 15px;
+    }
+
+    .biografie h1 {
+        font-size: 27px;
+    }
+
+    .biografie p {
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+}
