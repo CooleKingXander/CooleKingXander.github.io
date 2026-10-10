@@ -1,60 +1,384 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Het binaire stelsel - Torriehub</title>
+    <title>Binair stelsel - Torriehub</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pagina {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            color: white;
+        }
+
+        .pagina h1,
+        .pagina h2 {
+            color: #16b8ff;
+        }
+
+        .titel {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .kaart {
+            background: #0c2340;
+            border: 1px solid #16466e;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .rij {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .tekst,
+        .plaatje {
+            flex: 1 1 280px;
+        }
+
+        .plaatje {
+            text-align: center;
+        }
+
+        .bit {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 65px;
+            height: 65px;
+            margin: 6px;
+            border: 2px solid #08aaff;
+            border-radius: 12px;
+            background: #06172a;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .bit small {
+            font-size: 12px;
+            color: #9bdcff;
+        }
+
+        .aan-uit {
+            display: inline-block;
+            margin: 8px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #102f50;
+        }
+
+        .aan-uit strong {
+            display: block;
+            font-size: 28px;
+            color: #16b8ff;
+        }
+
+        .quiz {
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .quiz h2 {
+            font-size: 28px;
+        }
+
+        .quiz input {
+            box-sizing: border-box;
+            width: 95%;
+            padding: 12px;
+            border: 1px solid #08aaff;
+            border-radius: 8px;
+            background: #06172a;
+            color: white;
+            font-size: 18px;
+        }
+
+        .quiz button {
+            width: 95%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #079df0;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .quiz button:hover {
+            background: #007ac7;
+        }
+
+        .getal {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        #feedback {
+            min-height: 25px;
+            font-weight: bold;
+        }
+
+        .bonanza-subtitel {
+            color: #b9dfff;
+        }
+
+        @media (max-width: 600px) {
+            .pagina {
+                padding: 12px;
+            }
+
+            .kaart {
+                padding: 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
 
-            <li class="dropdown">
-                <a href="#">Vrienden</a>
-                <ul class="dropdown-menu">
-                    <li><a href="mats.html">Mats</a></li>
-                    <li><a href="beau.html">Beau</a></li>
-                    <li><a href="chris.html">Chris</a></li>
-                    <li><a href="does.html">Does</a></li>
-                    <li><a href="xander.html">Xander</a></li>
-                </ul>
-            </li>
+        <li class="dropdown">
+            <a href="#">Informatica ▾</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="invoer-verwerking-uitvoer.html">
+                        Invoer - verwerking - uitvoer
+                    </a>
+                </li>
+                <li><a href="binair.html">Binair stelsel</a></li>
+                <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                <li>
+                    <a href="compressie.html">
+                        Compressie: Bitmap / Vector
+                    </a>
+                </li>
+                <li><a href="ai.html">AI</a></li>
+                <li><a href="ai-gebruik.html">Waar gebruik ik AI voor?</a></li>
+                <li><a href="ai-mobiel.html">AI in mijn mobiel</a></li>
+                <li><a href="ai-artikel.html">AI-artikel</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 
-            <li class="dropdown">
-                <a href="#">Informatica</a>
-                <ul class="dropdown-menu">
-                    <li><a href="invoer-verwerking-uitvoer.html">Invoer, verwerking en uitvoer</a></li>
-                    <li><a href="binair.html">Het binaire stelsel</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+<main class="pagina">
 
-    <main class="biografie">
+    <header class="titel">
+        <h1>Het binaire stelsel</h1>
+        <p>Hoe computers werken met alleen 0 en 1.</p>
+    </header>
 
-    <img src="https://placehold.co/900x300/182033/00a8ff?text=Het+binaire+stelsel+%7C+0+en+1"
-         alt="Het binaire stelsel met de cijfers 0 en 1"
-         style="width: 100%; max-width: 900px; display: block; margin: 0 auto 25px;">
+    <section class="kaart">
+        <div class="rij">
+            <div class="tekst">
+                <h2>Wat is binair?</h2>
 
-    <h1>2. Het binaire stelsel</h1>
+                <p>
+                    Het binaire stelsel is een manier om getallen weer te geven.
+                    Het gebruikt alleen de cijfers 0 en 1.
+                </p>
 
-    <h2>Wat betekent het?</h2>
-    <p>Computers werken met het binaire stelsel. Dat betekent dat ze alleen de cijfers 0 en 1 gebruiken.</p>
-    <p>Dit komt doordat computers werken met elektrische signalen die aan of uit kunnen staan.</p>
-    <p>Een binair cijfer noemen we een bit. Meerdere bits samen kunnen informatie opslaan en verwerken. Acht bits samen vormen één byte.</p>
+                <p>
+                    Computers werken met elektrische signalen die aan of uit
+                    kunnen staan. Daarom zijn nullen en enen handig om
+                    informatie op te slaan en te verwerken.
+                </p>
 
-    <h2>Voorbeeld:</h2>
-    <p>Het gewone getal 5 schrijf je in het binaire stelsel als 101.</p>
-    <p>Computers gebruiken dit soort combinaties van nullen en enen om informatie te verwerken.</p>
+                <p>
+                    Eén cijfer in het binaire stelsel heet een bit.
+                    Acht bits samen vormen een byte.
+                </p>
+            </div>
+
+            <div class="plaatje">
+                <div class="aan-uit">
+                    <strong>0</strong>
+                    Uit
+                </div>
+
+                <div class="aan-uit">
+                    <strong>1</strong>
+                    Aan
+                </div>
+
+                <p>
+                    Een computer gebruikt combinaties van nullen en enen
+                    om informatie voor te stellen.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="kaart">
+        <h2>Hoe zet je een getal om?</h2>
+
+        <p>
+            Elke positie heeft een waarde. Van rechts naar links zijn dat
+            1, 2, 4, 8, 16 enzovoort.
+        </p>
+
+        <div class="plaatje">
+            <div class="bit">1<small>waarde 4</small></div>
+            <div class="bit">0<small>waarde 2</small></div>
+            <div class="bit">1<small>waarde 1</small></div>
+        </div>
+
+        <p style="text-align:center;">
+            Je telt de waarden op waar een 1 staat:
+            4 + 0 + 1 = 5.
+        </p>
+
+        <p style="text-align:center;">
+            Dus <strong>5 = 101 in binair</strong>.
+        </p>
+    </section>
+
+    <section class="kaart">
+        <h2>Waarom gebruiken computers binair?</h2>
+
+        <p>
+            Computers gebruiken binair omdat elektronische signalen aan
+            of uit kunnen staan. Door veel nullen en enen te combineren,
+            kunnen computers informatie opslaan en verwerken, zoals tekst,
+            afbeeldingen, geluid en video's.
+        </p>
+    </section>
+
+    <section class="kaart">
+        <div class="rij">
+
+            <div class="tekst">
+                <h2>Speel Binary Bonanza!</h2>
+
+                <p class="bonanza-subtitel">
+                    Test je kennis en verzamel punten!
+                </p>
+
+                <p>
+                    Je krijgt een gewoon getal. Zet dit om naar het
+                    binaire stelsel en vul je antwoord in.
+                </p>
+
+                <p>
+                    Gebruik alleen de cijfers 0 en 1.
+                    Voor elk goed antwoord krijg je een punt.
+                </p>
+
+                <p>
+                    Tip: denk aan de waarden 1, 2, 4, 8, 16 en 32.
+                </p>
+            </div>
+
+            <div class="tekst quiz">
+                <h2>🎮 Binary Bonanza</h2>
+
+                <p>Zet dit getal om naar binair:</p>
+
+                <div class="getal" id="getal">13</div>
+
+                <form id="quizForm">
+                    <input
+                        id="antwoord"
+                        type="text"
+                        placeholder="Typ je binaire antwoord"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit">Controleer antwoord</button>
+                </form>
+
+                <p id="feedback" aria-live="polite"></p>
+
+                <p>
+                    Score: <strong id="score">0</strong>
+                </p>
+
+                <button type="button" id="volgende">
+                    Volgende vraag
+                </button>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
-    <footer>
-        <p>© Torriehub</p>
-    </footer>
+<footer>
+    <p>© 2026 - Torriehub</p>
+</footer>
+
+<script>
+    let getal = 13;
+    let score = 0;
+    let beantwoord = false;
+
+    const getalVak = document.getElementById("getal");
+    const antwoordVak = document.getElementById("antwoord");
+    const feedback = document.getElementById("feedback");
+    const scoreVak = document.getElementById("score");
+    const formulier = document.getElementById("quizForm");
+    const controleerKnop = formulier.querySelector("button");
+
+    formulier.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (beantwoord) return;
+
+        const antwoord = antwoordVak.value.trim();
+
+        if (!/^[01]+$/.test(antwoord)) {
+            feedback.textContent = "Gebruik alleen nullen en enen.";
+            return;
+        }
+
+        beantwoord = true;
+
+        const juistAntwoord = getal.toString(2);
+
+        if (antwoord === juistAntwoord) {
+            score++;
+            scoreVak.textContent = score;
+            feedback.textContent = "Goed gedaan! Helemaal juist!";
+        } else {
+            feedback.textContent =
+                "Helaas! Het juiste antwoord is " + juistAntwoord + ".";
+        }
+
+        antwoordVak.disabled = true;
+        controleerKnop.disabled = true;
+    });
+
+    document.getElementById("volgende").addEventListener("click", function() {
+        getal = Math.floor(Math.random() * 31) + 2;
+
+        getalVak.textContent = getal;
+        antwoordVak.value = "";
+        antwoordVak.disabled = false;
+        controleerKnop.disabled = false;
+        feedback.textContent = "";
+        beantwoord = false;
+
+        antwoordVak.focus();
+    });
+</script>
 
 </body>
 </html>
