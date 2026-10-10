@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressie - Torriehub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina { max-width: 1000px; margin: 50px auto; padding: 25px; }
+        .pagina h1, .pagina h2 { color: #00a8ff; margin-bottom: 15px; }
+        .pagina p { color: #d5dbea; font-size: 17px; line-height: 1.7; margin-bottom: 15px; }
+        .kaart { background: #1b2538; padding: 25px; border-radius: 12px; margin-bottom: 25px; }
+        .vergelijking { display: flex; flex-wrap: wrap; gap: 20px; }
+        .voorbeeld { flex: 1 1 250px; background: #101522; padding: 20px; border-radius: 10px; text-align: center; }
+        .pixels { display: grid; grid-template-columns: repeat(6, 22px); gap: 3px; justify-content: center; margin: 20px auto; }
+        .pixels span { width: 22px; height: 22px; background: #00a8ff; }
+        .pixels span:nth-child(3n) { background: #ffcc55; }
+        .pixels span:nth-child(4n) { background: #ffffff; }
+        .vector { width: 125px; height: 100px; margin: 20px auto; }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Informatica ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li>
+                <li><a href="binair.html">Binair stelsel</a></li>
+                <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                <li><a href="compressie.html">Compressie: Bitmap / Vector</a></li>
+                <li><a href="ai.html">AI</a></li>
+                <li><a href="ai-gebruik.html">Waar gebruik ik AI voor?</a></li>
+                <li><a href="ai-mobiel.html">AI in mijn mobiel</a></li>
+                <li><a href="ai-artikel.html">AI-artikel</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main class="pagina">
+    <h1>Compressie: Bitmap en Vector</h1>
+
+    <section class="kaart">
+        <h2>Wat is compressie?</h2>
+        <p>
+            Compressie is het kleiner maken van een bestand. Hierdoor neemt
+            het minder opslagruimte in en kan het vaak sneller worden verstuurd.
+            Compressie wordt bijvoorbeeld gebruikt bij foto's, video's en muziek.
+        </p>
+    </section>
+
+    <section class="kaart">
+        <h2>Bitmapafbeeldingen</h2>
+        <p>
+            Een bitmapafbeelding bestaat uit kleine puntjes die pixels worden
+            genoemd. Elke pixel heeft een eigen kleur. Foto's zijn meestal
+            bitmapafbeeldingen. Als je zo'n afbeelding sterk vergroot, kunnen
+            de pixels zichtbaar worden en kan de afbeelding blokkerig lijken.
+        </p>
+
+        <div class="voorbeeld">
+            <h3>Voorbeeld van pixels</h3>
+            <div class="pixels">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p>Een bitmap bestaat uit losse pixels.</p>
+        </div>
+    </section>
+
+    <section class="kaart">
+        <h2>Vectorafbeeldingen</h2>
+        <p>
+            Een vectorafbeelding bestaat uit lijnen, vormen en berekeningen.
+            Daardoor kan de afbeelding worden vergroot zonder dat de randen
+            onscherp worden. Logo's en pictogrammen worden vaak als vector
+            opgeslagen.
+        </p>
+
+        <div class="voorbeeld">
+            <h3>Voorbeeld van een vector</h3>
+            <svg class="vector" viewBox="0 0 125 100" role="img" aria-label="Een eenvoudige vectorster">
+                <polygon points="62,5 77,38 115,40 86,64 96,95 62,76 29,95 39,64 10,40 48,38"
+                    fill="#00a8ff" stroke="white" stroke-width="2"/>
+            </svg>
+            <p>Een vorm kan worden vergroot zonder zichtbare pixels.</p>
+        </div>
+    </section>
+
+    <section class="kaart">
+        <h2>Wat is het verschil?</h2>
+        <p>
+            Bitmap is handig voor foto's en afbeeldingen met veel details.
+            Vector is handig voor logo's en tekeningen die op verschillende
+            formaten scherp moeten blijven. Compressie kan bestanden kleiner
+            maken, maar niet elke vorm van compressie behoudt alle kwaliteit.
+        </p>
+    </section>
+</main>
+
+<footer><p>© 2026 - Torriehub</p></footer>
+</body>
+</html>

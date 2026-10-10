@@ -1,18 +1,102 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html element-->
-    <head>
-        <title>Torriehub</title>
-        <link rel="stylesheet" type="text/css" href="layout.css">
-        <meta charset-"utf-8">
-    </head>
-    <body>
-        <br>
-        <ul>
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleurmodellen - Torriehub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina { max-width: 1000px; margin: 50px auto; padding: 25px; }
+        .pagina h1, .pagina h2 { color: #00a8ff; margin-bottom: 15px; }
+        .pagina p { color: #d5dbea; font-size: 17px; line-height: 1.7; margin-bottom: 15px; }
+        .kaart { background: #1b2538; padding: 25px; border-radius: 12px; margin-bottom: 25px; }
+        .kleuren { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+        .kleur { flex: 1 1 150px; padding: 35px 10px; text-align: center; border-radius: 10px; font-weight: bold; }
+        .rood { background: #ff3333; }
+        .groen { background: #20c878; color: #101522; }
+        .blauw { background: #168cff; }
+        .cyaan { background: #00ffff; color: #101522; }
+        .magenta { background: #ff00ff; }
+        .geel { background: #ffff00; color: #101522; }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="binairstelsel.html">Binair stelsel</a></li>
-        <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-        </ul> 
-        <h1>Welkom op pagina kleurmodellen</h1>
-        <p> hier ga ik wat uitleggen over welke kleurmodellen ik heb gebruikt en hoe</p>
-    </body>
+        <li class="dropdown">
+            <a href="#">Informatica ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li>
+                <li><a href="binair.html">Binair stelsel</a></li>
+                <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                <li><a href="compressie.html">Compressie: Bitmap / Vector</a></li>
+                <li><a href="ai.html">AI</a></li>
+                <li><a href="ai-gebruik.html">Waar gebruik ik AI voor?</a></li>
+                <li><a href="ai-mobiel.html">AI in mijn mobiel</a></li>
+                <li><a href="ai-artikel.html">AI-artikel</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main class="pagina">
+    <h1>Kleurmodellen</h1>
+
+    <section class="kaart">
+        <h2>Wat is een kleurmodel?</h2>
+        <p>
+            Een kleurmodel is een manier om kleuren met getallen vast te leggen.
+            Computers en andere apparaten gebruiken kleurmodellen om kleuren
+            weer te geven. Twee bekende kleurmodellen zijn RGB en CMYK.
+        </p>
+    </section>
+
+    <section class="kaart">
+        <h2>RGB: kleuren op een scherm</h2>
+        <p>
+            RGB staat voor rood, groen en blauw. Door deze drie kleuren
+            in verschillende hoeveelheden te combineren, kunnen veel
+            verschillende kleuren worden gemaakt. Schermen gebruiken RGB.
+            Als alle drie de kleuren op hun maximale waarde staan, krijg
+            je wit. Als ze allemaal op 0 staan, krijg je zwart.
+        </p>
+
+        <div class="kleuren">
+            <div class="kleur rood">Rood</div>
+            <div class="kleur groen">Groen</div>
+            <div class="kleur blauw">Blauw</div>
+        </div>
+    </section>
+
+    <section class="kaart">
+        <h2>CMYK: kleuren bij het printen</h2>
+        <p>
+            CMYK staat voor cyaan, magenta, geel en zwart. Dit kleurmodel
+            wordt vooral gebruikt bij printers. De printer combineert
+            deze kleuren om afbeeldingen en teksten op papier af te drukken.
+        </p>
+
+        <div class="kleuren">
+            <div class="kleur cyaan">Cyaan</div>
+            <div class="kleur magenta">Magenta</div>
+            <div class="kleur geel">Geel</div>
+            <div class="kleur" style="background:#111;color:white;">Zwart</div>
+        </div>
+    </section>
+
+    <section class="kaart">
+        <h2>Het verschil</h2>
+        <p>
+            RGB wordt gebruikt voor schermen, zoals telefoons en computers.
+            CMYK wordt vooral gebruikt voor printen. Het belangrijkste verschil
+            is dus waar de kleuren voor worden gebruikt en hoe ze worden
+            gecombineerd.
+        </p>
+    </section>
+</main>
+
+<footer><p>© 2026 - Torriehub</p></footer>
+</body>
 </html>
