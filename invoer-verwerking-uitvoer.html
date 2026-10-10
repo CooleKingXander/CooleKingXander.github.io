@@ -1,24 +1,161 @@
 
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoer, verwerking en uitvoer - Torriehub</title>
+    <title>Invoer - Verwerking - Uitvoer | Torriehub</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .onderwerp {
+            background: #182033;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+        }
+
+        .onderwerp h1,
+        .onderwerp h2 {
+            color: #78b7ff;
+        }
+
+        .schema {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .stap {
+            background: #253451;
+            border: 2px solid #78b7ff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .stap h3 {
+            color: #78b7ff;
+        }
+
+        .pijl {
+            font-size: 30px;
+            color: #78b7ff;
+        }
+
+        .voorbeeld {
+            background: #101522;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            background: #78b7ff;
+            color: #101522;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #a3ceff;
+        }
+
+        #resultaat {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #78b7ff;
+        }
+
+        @media (max-width: 600px) {
+            .schema {
+                flex-direction: column;
+            }
+
+            .pijl {
+                transform: rotate(90deg);
+            }
+
+            .stap {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HOOFDMENU -->
     <nav>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
 
             <li class="dropdown">
+                <a href="#">Mats ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="mats.html">Biografie</a></li>
+                    <li><a href="mats-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="mats-torrie.html">Leipste torrie</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Beau ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="beau.html">Biografie</a></li>
+                    <li><a href="beau-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="beau-torrie.html">Leipste torrie</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Chris ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="chris.html">Biografie</a></li>
+                    <li><a href="chris-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="chris-torrie.html">Leipste torrie</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Does ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="does.html">Biografie</a></li>
+                    <li><a href="does-kwaliteiten.html">Kwaliteiten</a></li>
+                    <li><a href="does-torrie.html">Leipste torrie</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Xander ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="xander.html">Biografie</a></li>
+                    <li><a href="xander-kwaliteiten.html">Kwaliteiten</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
                 <a href="#">Informatica ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="informatica-onderwerpen.html">Alle informatica-onderwerpen</a></li>
                     <li><a href="invoer-verwerking-uitvoer.html">Invoer - verwerking - uitvoer</a></li>
                     <li><a href="binair.html">Binair stelsel</a></li>
                     <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
@@ -33,60 +170,119 @@
     </nav>
 
     <main>
-
-        <section class="biografie">
-
+        <section class="onderwerp">
             <h1>Invoer, verwerking en uitvoer</h1>
 
             <p>
-                Bijna elk apparaat werkt met invoer, verwerking en uitvoer.
-                Eerst voer je iets in, daarna verwerkt het apparaat die
-                informatie en uiteindelijk krijg je een resultaat.
+                Een computer werkt vaak volgens drie stappen:
+                invoer, verwerking en uitvoer. De computer krijgt
+                eerst informatie binnen, verwerkt die informatie
+                en laat daarna een resultaat zien.
             </p>
 
-            <p>
-                <strong>Invoer:</strong> je geeft informatie aan een apparaat.
-                Dat kan bijvoorbeeld door iets te typen op je toetsenbord,
-                met je muis te klikken of iets in te spreken op je telefoon.
-            </p>
+            <div class="schema">
+                <div class="stap">
+                    <h3>1. Invoer</h3>
+                    <p>De computer krijgt gegevens binnen.</p>
+                    <p>Bijvoorbeeld: je typt iets op je toetsenbord.</p>
+                </div>
 
-            <p>
-                <strong>Verwerking:</strong> de computer verwerkt de informatie
-                met behulp van een programma en voert de bijbehorende opdrachten uit.
-            </p>
+                <div class="pijl">➜</div>
 
-            <p>
-                <strong>Uitvoer:</strong> de computer laat het resultaat zien
-                of horen. Dit kan bijvoorbeeld op je scherm, via luidsprekers
-                of met een printer.
-            </p>
+                <div class="stap">
+                    <h3>2. Verwerking</h3>
+                    <p>De computer verwerkt de gegevens.</p>
+                    <p>Bijvoorbeeld: hij berekent een som.</p>
+                </div>
 
-            <img
-                src="https://placehold.co/650x200/eeeeee/333333?text=Invoer+%E2%86%92+Verwerking+%E2%86%92+Uitvoer"
-                alt="Schema van invoer, verwerking en uitvoer"
-                style="display: block; max-width: 100%; height: auto; margin: 20px auto;">
+                <div class="pijl">➜</div>
 
-            <h2>Voorbeeld</h2>
-
-            <p>
-                Als je op je rekenmachine 5 + 3 invoert, is dat de invoer.
-                De rekenmachine rekent de som uit. Dat is de verwerking.
-                Daarna verschijnt het antwoord 8 op het scherm. Dat is de uitvoer.
-            </p>
-
-            <p>
-                Hetzelfde gebeurt wanneer je een bericht op je telefoon typt.
-                Je typt de tekst als invoer, de telefoon verwerkt de informatie
-                en vervolgens wordt het bericht getoond of verstuurd.
-            </p>
-
+                <div class="stap">
+                    <h3>3. Uitvoer</h3>
+                    <p>De computer geeft een resultaat.</p>
+                    <p>Bijvoorbeeld: het antwoord verschijnt op je scherm.</p>
+                </div>
+            </div>
         </section>
 
+        <section class="onderwerp">
+            <h2>Voorbeelden uit het dagelijks leven</h2>
+
+            <div class="voorbeeld">
+                <h3>Een rekenmachine</h3>
+                <p><strong>Invoer:</strong> je voert 5 + 3 in.</p>
+                <p><strong>Verwerking:</strong> de rekenmachine telt de getallen op.</p>
+                <p><strong>Uitvoer:</strong> het antwoord 8 verschijnt op het scherm.</p>
+            </div>
+
+            <div class="voorbeeld">
+                <h3>Een game</h3>
+                <p><strong>Invoer:</strong> je drukt op een toets.</p>
+                <p><strong>Verwerking:</strong> de computer verwerkt je actie.</p>
+                <p><strong>Uitvoer:</strong> je personage beweegt op het scherm.</p>
+            </div>
+
+            <div class="voorbeeld">
+                <h3>Een pinautomaat</h3>
+                <p><strong>Invoer:</strong> je voert je pincode in.</p>
+                <p><strong>Verwerking:</strong> de automaat controleert de gegevens.</p>
+                <p><strong>Uitvoer:</strong> je krijgt te zien of je verder kunt.</p>
+            </div>
+        </section>
+
+        <section class="onderwerp">
+            <h2>Probeer het zelf!</h2>
+            <p>
+                Vul twee getallen in. De computer gebruikt de getallen
+                als invoer, telt ze bij elkaar op en toont de uitvoer.
+            </p>
+
+            <div class="voorbeeld">
+                <label for="getal1">Eerste getal:</label><br>
+                <input type="number" id="getal1" placeholder="Bijv. 5">
+
+                <br>
+
+                <label for="getal2">Tweede getal:</label><br>
+                <input type="number" id="getal2" placeholder="Bijv. 3">
+
+                <br>
+
+                <button onclick="berekenSom()">Bereken de som</button>
+
+                <p id="resultaat">Het antwoord verschijnt hier.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>© 2026 - Torriehub</p>
     </footer>
+
+    <div class="sam-link">
+        <a href="sam.html">Sam ▾</a>
+        <div class="sam-dropdown">
+            <a href="sam.html">Biografie</a>
+            <a href="sam-kwaliteiten.html">Kwaliteiten</a>
+            <a href="sam-torrie.html">Leipste torrie</a>
+        </div>
+    </div>
+
+    <script>
+        function berekenSom() {
+            const getal1 = document.getElementById("getal1").value;
+            const getal2 = document.getElementById("getal2").value;
+            const resultaat = document.getElementById("resultaat");
+
+            if (getal1 === "" || getal2 === "") {
+                resultaat.textContent = "Vul eerst allebei de getallen in.";
+                return;
+            }
+
+            const som = Number(getal1) + Number(getal2);
+            resultaat.textContent = "Uitvoer: " + som;
+        }
+    </script>
+
 </body>
 </html>
-```
