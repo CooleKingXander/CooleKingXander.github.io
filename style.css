@@ -348,3 +348,12 @@ footer {
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
+/* Afbeelding op de AI-pagina verkleinen */
+Artificial_Intelligence_&_AI_&_Machine_Learning_-_30212411048.jpg {
+    display: block;
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+    margin: 25px auto 35px;
+    object-fit: contain;
+}
