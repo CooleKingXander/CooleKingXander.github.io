@@ -263,9 +263,9 @@ footer {
 }
 
 /* Op kleine schermen */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .groepsfoto {
-        width: 96%;
+        width: 75%;
         margin: 20px auto 30px;
     }
 
