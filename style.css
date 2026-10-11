@@ -365,7 +365,7 @@ iphone-15-pro-1694588646.jpg .mobiel {
     margin: 25px auto 35px;
     object-fit: contain;
 }
-.mobiel-afbeelding {
+mobiel-afbeelding {
     display: block;
     width: 250px;
     max-width: 100%;
