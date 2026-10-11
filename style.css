@@ -238,3 +238,38 @@ footer {
         font-size: 13px;
     }
 }
+/* Mooie groepsfoto op de homepagina */
+.groepsfoto {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto 40px;
+    text-align: center;
+}
+
+.groepsfoto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.groepsfoto p {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Op kleine schermen */
+@media (max-width: 600px) {
+    .groepsfoto {
+        width: 96%;
+        margin: 20px auto 30px;
+    }
+
+    .groepsfoto img {
+        border-radius: 10px;
+    }
+}
