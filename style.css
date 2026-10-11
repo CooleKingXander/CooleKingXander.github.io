@@ -273,6 +273,28 @@ footer {
         border-radius: 10px;
     }
 }
+<<<<<<< HEAD
+
+/* Afbeelding bovenaan de AI-pagina */
+.ai-afbeelding {
+    display: block;
+    width: 75%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Op mobiel */
+@media (max-width: 600px) {
+    .ai-afbeelding {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+=======
 .groepsfoto {
     width: 70%;       /* Maakt de foto smaller */
     max-width: 800px; /* Maximale breedte */
@@ -284,4 +306,26 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 18px;
+}
+
+/* Portretfoto op de vriendenpagina's */
+.vrienden-portret {
+    display: block;
+    width: 75%;
+    max-width: 650px;
+    max-height: 500px;
+    height: auto;
+    object-fit: cover;
+    margin: 25px auto 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Op mobiel */
+@media (max-width: 600px) {
+    .vrienden-portret {
+        width: 100%;
+        border-radius: 10px;
+    }
 }
