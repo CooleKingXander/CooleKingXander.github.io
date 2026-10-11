@@ -278,8 +278,8 @@ footer {
 /* Afbeelding bovenaan de AI-pagina */
 .ai-afbeelding {
     display: block;
-    width: 75%;
-    max-width: 800px;
+    width: 60%;
+    max-width: 500px;
     height: auto;
     margin: 25px auto 35px;
     border-radius: 16px;
