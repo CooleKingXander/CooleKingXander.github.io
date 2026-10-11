@@ -273,3 +273,15 @@ footer {
         border-radius: 10px;
     }
 }
+.groepsfoto {
+    width: 70%;       /* Maakt de foto smaller */
+    max-width: 800px; /* Maximale breedte */
+    margin: 30px auto;
+    text-align: center;
+}
+
+.groepsfoto img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
