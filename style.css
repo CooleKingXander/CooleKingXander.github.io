@@ -329,3 +329,13 @@ footer {
         border-radius: 10px;
     }
 }
+/* Afbeelding bovenaan de AI-pagina */
+.ai-afbeelding {
+    display: block;
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    margin: 25px auto 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
